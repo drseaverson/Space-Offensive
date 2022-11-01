@@ -413,5 +413,8 @@ frames = SubResource( 75 )
 animation = "Player_Idle_Pistol"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -7, 9 )
+position = Vector2( -4, 8 )
 shape = SubResource( 1 )
+
+[node name="BulletPoint" type="Node2D" parent="."]
+position = Vector2( 53, 28 )
