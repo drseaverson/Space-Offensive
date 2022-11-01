@@ -8,6 +8,7 @@ radius = 65.0
 [node name="KinematicBody2D" type="KinematicBody2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -1 )
 texture = ExtResource( 38 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
