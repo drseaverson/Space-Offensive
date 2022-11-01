@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Sprites/Player/player_gun_flare.png" type="Texture" id=1]
+
+[node name="PlayerGunFlare" type="KinematicBody2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 112, 3.33786e-06 )
+rotation = 0.610865
+texture = ExtResource( 1 )
