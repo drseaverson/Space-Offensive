@@ -3,7 +3,7 @@ extends KinematicBody2D
 #player value handlers
 export var move_speed = 250
 export var bullet_speed = 1375
-export var fire_rate = 0.50
+export var fire_rate = 0.25
 var gun_flare_rate = 0.05
 export var player_health = 100
 export var pistol_mag_size = 12
