@@ -8,7 +8,6 @@ export var master_music_value = -5
 export var effects_music_value = 0
 export var music_value = 0
 
-#sets values of all saved settings
 func _ready():
 	get_node("VBoxContainer/MasterVolume").value = master_music_value
 	get_node("VBoxContainer/EffectsVolume").value = effects_music_value
