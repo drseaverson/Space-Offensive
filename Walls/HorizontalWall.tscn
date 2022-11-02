@@ -6,6 +6,7 @@
 extents = Vector2( 280.5, 58 )
 
 [node name="HorizontalWall" type="Node2D"]
+scale = Vector2( 0.5, 0.5 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
