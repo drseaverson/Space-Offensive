@@ -4,6 +4,9 @@ var target = load("res://Sprites/Cursors/red_target.png")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	#stops menu music if it is still playing
+	if MusicController.is_playing():
+		MusicController.stop_music()
 	#changes cursor to target cursor on game start
 	Input.set_custom_mouse_cursor(target, Input.CURSOR_ARROW, Vector2(20, 20))
 

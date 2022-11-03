@@ -1,7 +1,6 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/Options.gd" type="Script" id=1]
-[ext_resource path="res://Sounds/menuMusic.wav" type="AudioStream" id=2]
 [ext_resource path="res://Fonts/AcerSupplement-wOpZ.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]
@@ -57,12 +56,6 @@ margin_bottom = 104.0
 rect_min_size = Vector2( 160, 32 )
 min_value = -30.0
 max_value = 0.0
-
-[node name="MenuMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 2 )
-autoplay = true
-mix_target = 1
-bus = "Music"
 
 [node name="BackButton" type="Button" parent="."]
 anchor_left = 1.0

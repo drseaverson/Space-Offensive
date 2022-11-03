@@ -14,8 +14,8 @@ func _ready():
 	get_node("VBoxContainer/MusicVolume").value = music_value
 
 func _process(delta):
-	if $MenuMusic.playing == false:
-		$MenuMusic.play()
+	if MusicController.is_playing() == false:
+		MusicController.play_music()
 
 func _on_MasterVolume_value_changed(value):
 	AudioServer.set_bus_volume_db(master_bus, value)

@@ -16,6 +16,7 @@ var gun_flare = preload("res://Player/PlayerGunFlare.tscn")
 var can_shoot = true
 var can_melee = true
 var is_reloading = false
+var is_shooting = false
 
 
 func _process(delta):
@@ -24,30 +25,42 @@ func _process(delta):
 	#intializes shot and delay before next shot can be taken
 	if Input.is_action_just_pressed("shoot_primary") and can_shoot and pistol_mag_size > 0:
 		can_shoot = false
+		is_shooting = true
 		#set animation for player shoot pistol
 		_player_shoot()
+		is_shooting = false
 		pistol_mag_size -= 1;
 		yield(get_tree().create_timer(fire_rate), "timeout")
+		$AnimatedSprite.animation = "Player_Move_Pistol"
 		can_shoot = true
+	elif Input.is_action_just_pressed("shoot_primary") and can_shoot:
+		$OutOfAmmo.play()
 		
 	if Input.is_action_just_pressed("reload") and pistol_mag_size < 12:
+		is_reloading = true
 		$AnimatedSprite.animation = "Player_Reload_Pistol"
+		yield(get_tree().create_timer(1.4), "timeout")
 		pistol_mag_size = 12
+		is_reloading = false
 
 #player movement management
 func _physics_process(delta):
 	var direction = Vector2.ZERO
 	if Input.is_action_pressed("move_up"):
-		$AnimatedSprite.animation = "Player_Move_Pistol"
+		if !is_reloading and !is_shooting:
+			$AnimatedSprite.animation = "Player_Move_Pistol"
 		direction.y -= 1.0
 	if Input.is_action_pressed("move_down"):
-		$AnimatedSprite.animation = "Player_Move_Pistol"
+		if !is_reloading and !is_shooting:
+			$AnimatedSprite.animation = "Player_Move_Pistol"
 		direction.y += 1.0
 	if Input.is_action_pressed("move_left"):
-		$AnimatedSprite.animation = "Player_Move_Pistol"
+		if !is_reloading and !is_shooting:
+			$AnimatedSprite.animation = "Player_Move_Pistol"
 		direction.x -= 1.0
 	if Input.is_action_pressed("move_right"):
-		$AnimatedSprite.animation = "Player_Move_Pistol"
+		if !is_reloading and !is_shooting:
+			$AnimatedSprite.animation = "Player_Move_Pistol"
 		direction.x += 1.0
 	
 	#resets player animation to idle when not moving/shooting
@@ -59,6 +72,8 @@ func _physics_process(delta):
 
 
 func _player_shoot():
+	$Pistol.play()
+	$AnimatedSprite.animation = "Player_Shoot_Pistol"
 	var bullet_temp = bullet.instance()
 	var gun_flare_temp = gun_flare.instance() 
 	gun_flare_temp.position = $BulletPoint.get_global_position()
