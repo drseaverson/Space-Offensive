@@ -5,8 +5,11 @@ export var move_speed = 250
 export var bullet_speed = 1500
 export var fire_rate = 0.25
 var gun_flare_rate = 0.05
+var reload_rate = 1.25
 export var player_health = 100
 export var pistol_mag_size = 12
+var state_machine
+var direction = Vector2.ZERO
 
 
 #loads bullet and gun flare
@@ -17,63 +20,62 @@ var can_shoot = true
 var can_melee = true
 var is_reloading = false
 var is_shooting = false
+var is_melee = false
 
+func _ready():
+	#grabs state machine instance to manage animations for player
+	state_machine = $AnimationTree.get("parameters/playback")
 
 func _process(delta):
 	look_at(get_global_mouse_position())
 	
-	#intializes shot and delay before next shot can be taken
-	if Input.is_action_just_pressed("shoot_primary") and can_shoot and pistol_mag_size > 0:
+
+#player movement management
+func _physics_process(delta):
+	get_input()
+	direction = move_and_slide(direction)
+	
+func get_input():
+	direction = Vector2.ZERO
+	if Input.is_action_just_pressed("shoot_primary") and can_shoot and pistol_mag_size > 0 and not is_reloading:
 		can_shoot = false
 		is_shooting = true
-		#set animation for player shoot pistol
 		_player_shoot()
 		is_shooting = false
 		pistol_mag_size -= 1;
 		yield(get_tree().create_timer(fire_rate), "timeout")
-		$AnimatedSprite.animation = "Player_Move_Pistol"
 		can_shoot = true
+		#returns early to not change animation unintentionally
+		return
 	elif Input.is_action_just_pressed("shoot_primary") and can_shoot:
 		$OutOfAmmo.play()
-		
 	if Input.is_action_just_pressed("reload") and pistol_mag_size < 12:
 		is_reloading = true
-		$AnimatedSprite.animation = "Player_Reload_Pistol"
-		yield(get_tree().create_timer(1.4), "timeout")
+		state_machine.travel("Player_Reload_Pistol")
 		pistol_mag_size = 12
+		yield(get_tree().create_timer(reload_rate), "timeout")
 		is_reloading = false
-
-#player movement management
-func _physics_process(delta):
-	var direction = Vector2.ZERO
+		return
 	if Input.is_action_pressed("move_up"):
-		if !is_reloading and !is_shooting:
-			$AnimatedSprite.animation = "Player_Move_Pistol"
 		direction.y -= 1.0
 	if Input.is_action_pressed("move_down"):
-		if !is_reloading and !is_shooting:
-			$AnimatedSprite.animation = "Player_Move_Pistol"
 		direction.y += 1.0
 	if Input.is_action_pressed("move_left"):
-		if !is_reloading and !is_shooting:
-			$AnimatedSprite.animation = "Player_Move_Pistol"
 		direction.x -= 1.0
 	if Input.is_action_pressed("move_right"):
-		if !is_reloading and !is_shooting:
-			$AnimatedSprite.animation = "Player_Move_Pistol"
 		direction.x += 1.0
 	
-	#resets player animation to idle when not moving/shooting
-	if (Input.is_action_just_released("move_up") || Input.is_action_just_released("move_down") || Input.is_action_just_released("move_right") || Input.is_action_just_released("move_left")) and can_shoot and can_melee and !is_reloading:
-		$AnimatedSprite.animation = "Player_Idle_Pistol"
 	#controls diagonal movement normalization
-	direction = direction.normalized()
-	move_and_slide(direction * move_speed)
+	direction = direction.normalized() * move_speed
+	if direction.length() == 0:
+		state_machine.travel("Player_Idle_Pistol")
+	if direction.length() > 0:
+		state_machine.travel("Player_Move_Pistol")
 
 
 func _player_shoot():
 	$Pistol.play()
-	$AnimatedSprite.animation = "Player_Shoot_Pistol"
+	state_machine.travel("Player_Shoot_Pistol")
 	var bullet_temp = bullet.instance()
 	var gun_flare_temp = gun_flare.instance() 
 	gun_flare_temp.position = $BulletPoint.get_global_position()
@@ -86,3 +88,6 @@ func _player_shoot():
 	#minor yield to display gun flare
 	yield(get_tree().create_timer(gun_flare_rate), "timeout")
 	gun_flare_temp.queue_free()
+	
+#set_physics_process(false) when player dies so you can't move
+#create function for picking up weapons to change animation trees (create alike names of animations for each tree to smoothly transfer
