@@ -7,7 +7,7 @@ export var fire_rate = 0.25
 var gun_flare_rate = 0.05
 var reload_rate = 1.25
 export var player_health = 100
-export var pistol_mag_size = 12
+export var pistol_mag_size = 13 #hange back to 12 (test change to change remote repository)
 var state_machine
 var direction = Vector2.ZERO
 
