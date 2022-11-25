@@ -1,5 +1,7 @@
 extends RigidBody2D
 
+var time_offscreen = 1
+
 #create function to destroy object once it has left the screen
 
 func _on_PlayerBullet_body_entered(body):
@@ -9,5 +11,6 @@ func _on_PlayerBullet_body_entered(body):
 
 
 func _on_VisibilityNotifier2D_screen_exited():
-	print("Exit Screen Activated")
+	# timeout to let bullet last longer off screen to shoot at enemies off screen
+	yield(get_tree().create_timer(time_offscreen), "timeout")
 	queue_free()
