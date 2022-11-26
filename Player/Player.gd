@@ -21,6 +21,7 @@ var can_melee = true
 var is_reloading = false
 var is_shooting = false
 var is_melee = false
+var dead = false
 
 func _ready():
 	#grabs state machine instance to manage animations for player
@@ -90,4 +91,10 @@ func _player_shoot():
 	gun_flare_temp.queue_free()
 	
 #set_physics_process(false) when player dies so you can't move
+func take_damage(damage):
+	player_health -= damage
+	print("Player Took Damage: ", damage)
+	if player_health <= 0:
+		# lock movement for death animation/explosion
+		dead = true
 #create function for picking up weapons to change animation trees (create alike names of animations for each tree to smoothly transfer

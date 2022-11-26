@@ -12,8 +12,9 @@ script = ExtResource( 4 )
 
 [node name="Background" type="TextureRect" parent="."]
 show_behind_parent = true
+margin_top = -1.0
 margin_right = 4090.0
-margin_bottom = 2435.0
+margin_bottom = 2434.0
 texture = ExtResource( 3 )
 expand = true
 
@@ -69,4 +70,4 @@ process_priority = 1
 position = Vector2( 1, 1 )
 
 [node name="Sniper" parent="." instance=ExtResource( 6 )]
-position = Vector2( 550, 252 )
+position = Vector2( 1032, 731 )
