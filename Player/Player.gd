@@ -13,8 +13,8 @@ var direction = Vector2.ZERO
 
 
 #loads bullet and gun flare
-var bullet = preload("res://Player/PlayerBullet.tscn")
-var gun_flare = preload("res://Player/PlayerGunFlare.tscn")
+var bullet = preload("res://Bullets/Player/PlayerBullet.tscn")
+var gun_flare = preload("res://Bullets/Player/PlayerGunFlare.tscn")
 #var rng = RandomNumberGenerator.new() random number generator (if needed)
 var can_shoot = true
 var can_melee = true

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Player_Shoot_Pistol.png-eb8dcf3cce436b81854ff2f6e6382473.stex"
+path="res://.import/Player_Shoot_Pistol.png-dac29aed02a89d169c65e63cb8edbabe.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/New_Player/Pistol/Player_Shoot_Pistol.png"
-dest_files=[ "res://.import/Player_Shoot_Pistol.png-eb8dcf3cce436b81854ff2f6e6382473.stex" ]
+source_file="res://Sprites/Player/Pistol/Player_Shoot_Pistol.png"
+dest_files=[ "res://.import/Player_Shoot_Pistol.png-dac29aed02a89d169c65e63cb8edbabe.stex" ]
 
 [params]
 

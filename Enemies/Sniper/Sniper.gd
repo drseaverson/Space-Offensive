@@ -1,33 +1,18 @@
-extends KinematicBody2D
+extends Enemy
+# inherites from main enemy class type 
+# inheritance currently working properly for sniper
+# small error to do with area2D entrance causing more firing (could be fixed with in range area and shooting area)
 
-export var bullet_speed = 1500
-export var move_speed = 150
-export var health = 100
-var direction = Vector2.ZERO
-var mag_size = 5
-var fire_rate = 3
-var shooting_delay = 0.75
-
-var is_dead = false
-var player
-var player_in_range = false
-
-var can_move = true
-var can_shoot = false
-var is_shooting = false
-var is_reloading = false
-
-#loads bullet and gun flare
-var bullet = preload("res://Enemies/Sniper/SniperBullet.tscn")
-# preload gun flare/warmup for shot being fired
-# var gun_flare = preload("res://Player/PlayerGunFlare.tscn")
 
 func _ready():
-	var my_player_group = get_tree().get_nodes_in_group("player")
-	for playerItem in my_player_group:
-		player = playerItem
+	# adjusts variables from parent class to match enemy type
+	enemy_name = "Sniper"
+	bullet = load("res://Bullets/Enemy/SniperBullet.tscn")
+	bullet_speed = 1650
+	fire_rate = 3
+	shooting_delay = 0.75
 
-func _process(delta):
+"""func _process(delta):
 	# enemy movement function and attacking
 	if player_in_range and not is_shooting:
 		# function for player in range
@@ -35,26 +20,13 @@ func _process(delta):
 	else:
 		# function for passive movement paths
 		pass
-	
-	
+
+# commented out to test proper parent inheritance
 func _physics_process(delta):
 	direction = Vector2.ZERO
 	get_movement()
 	#direction = move_and_slide(direction)
 
-func get_movement():
-	# create and manages enemy movement based on player movement (still while firing
-	if is_shooting:
-		return
-	if player_in_range and can_shoot:
-		can_shoot = false
-		# stops movement of enemy
-		direction = Vector2.ZERO
-		is_shooting = true
-		shoot_weapon()
-	#else if not is_reloading:
-		# movement handling
-		
 func shoot_weapon():
 	# play sniper firing warmup sound
 	# delay for sniper warmup
@@ -101,7 +73,7 @@ func take_damage(damage):
 func roaming_movement():
 	#resets shooting ability for next player in range
 	can_shoot = false
-	# roaming for inactive movement (player out of range)
+	# roaming for inactive movement (player out of range)"""
 
 #func chasing_movement():
 # chasing movement addition at later time to increase difficulty (enemies chase player)
