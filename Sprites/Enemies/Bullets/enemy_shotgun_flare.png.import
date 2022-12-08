@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/enemyHeavy.png-6af717db3a4d20338614bbffce065a05.stex"
+path="res://.import/enemy_shotgun_flare.png-fff13fead186515d6992ed5a6b190dde.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Enemies/enemyHeavy.png"
-dest_files=[ "res://.import/enemyHeavy.png-6af717db3a4d20338614bbffce065a05.stex" ]
+source_file="res://Sprites/Enemies/Bullets/enemy_shotgun_flare.png"
+dest_files=[ "res://.import/enemy_shotgun_flare.png-fff13fead186515d6992ed5a6b190dde.stex" ]
 
 [params]
 
