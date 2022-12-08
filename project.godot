@@ -15,13 +15,13 @@ _global_script_classes=[ {
 "path": "res://Bullets/BaseBullet/BulletBase.gd"
 }, {
 "base": "KinematicBody2D",
-"class": "Enemy",
+"class": "EnemyParent",
 "language": "GDScript",
 "path": "res://Enemies/EnemyParent/Enemy.gd"
 } ]
 _global_script_class_icons={
 "Bullet": "",
-"Enemy": ""
+"EnemyParent": ""
 }
 
 [application]

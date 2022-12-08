@@ -5,21 +5,22 @@
 [ext_resource path="res://Sprites/Enemies/Characters/enemySoldierMinigun.png" type="Texture" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 18.0001
-height = 33.9999
+radius = 23.0002
+height = 51.9998
 
 [node name="Heavy" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 
 [node name="Sprite" parent="." index="0"]
 position = Vector2( 28, 0 )
-rotation = 0.218166
+rotation = 0.260054
+scale = Vector2( 1.25, 1.25 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" parent="." index="1"]
-position = Vector2( -2, 1 )
+position = Vector2( -5, 1 )
 rotation = 1.57079
 shape = SubResource( 1 )
 
 [node name="BulletPoint" parent="." index="2"]
-position = Vector2( 75, -1 )
+position = Vector2( 88, 0 )

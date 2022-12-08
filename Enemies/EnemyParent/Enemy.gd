@@ -1,5 +1,5 @@
 extends KinematicBody2D
-class_name Enemy
+class_name EnemyParent
 
 const move_speed = 150
 export var health = 100
@@ -8,6 +8,7 @@ export var mag_size = 5
 export var fire_rate = 3
 export var shooting_delay = 0
 
+var health_bar = null
 var enemy_name = null
 var direction = Vector2.ZERO
 var is_dead = false
@@ -22,6 +23,8 @@ var bullet = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	health_bar = $HealthBar
+	health_bar.max_health_updated(health)
 	var my_player_group = get_tree().get_nodes_in_group("player")
 	for playerItem in my_player_group:
 		player = playerItem
@@ -90,6 +93,7 @@ func shoot_weapon():
 # tracks enemy damage/health
 func take_damage(damage):
 	health -= damage
+	health_bar.on_health_updated(health, damage)
 	print(enemy_name, " Took Damage: ", damage)
 	if health <= 0:
 		# lock movement of character for death animation/explosion etc
@@ -102,4 +106,5 @@ func roaming_movement():
 	can_shoot = false
 	# roaming for inactive movement (player out of range)
 
+#implement class for reloading when mag is empty (simple time out maybe)
 

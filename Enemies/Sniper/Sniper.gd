@@ -1,4 +1,4 @@
-extends Enemy
+extends EnemyParent
 # inherites from main enemy class type 
 # inheritance currently working properly for sniper
 # small error to do with area2D entrance causing more firing (could be fixed with in range area and shooting area)
@@ -8,9 +8,10 @@ func _ready():
 	# adjusts variables from parent class to match enemy type
 	enemy_name = "Sniper"
 	bullet = load("res://Bullets/Enemy/SniperBullet.tscn")
-	bullet_speed = 1650
+	bullet_speed = 1700
 	fire_rate = 3
 	shooting_delay = 0.75
+	mag_size = 1
 
 """func _process(delta):
 	# enemy movement function and attacking

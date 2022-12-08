@@ -1,4 +1,4 @@
-extends Enemy
+extends EnemyParent
 # inheritance form main enemy type
 # inheritance currently in progress and needs more work/testing
 # heavy needs personal bullets and gun flare depending on function

@@ -5,14 +5,15 @@
 [ext_resource path="res://Enemies/HeavyShotgun/HeavyShotgun.gd" type="Script" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 16.0
-height = 40.0
+radius = 22.0002
+height = 45.9997
 
 [node name="HeavyShotgun" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
 
 [node name="Sprite" parent="." index="0"]
 rotation = -0.174533
+scale = Vector2( 1.25, 1.25 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" parent="." index="1"]
