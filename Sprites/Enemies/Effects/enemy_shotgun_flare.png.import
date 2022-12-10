@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/grenade_explosion (change color).png-2505ed048bc34e582eb10f7652b66a5d.stex"
+path="res://.import/enemy_shotgun_flare.png-2eb86bbcf8ba71fb2d4f3b6c950c2139.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Enemies/Bullets/grenade_explosion (change color).png"
-dest_files=[ "res://.import/grenade_explosion (change color).png-2505ed048bc34e582eb10f7652b66a5d.stex" ]
+source_file="res://Sprites/Enemies/Effects/enemy_shotgun_flare.png"
+dest_files=[ "res://.import/enemy_shotgun_flare.png-2eb86bbcf8ba71fb2d4f3b6c950c2139.stex" ]
 
 [params]
 

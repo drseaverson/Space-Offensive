@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/enemy_shotgun_flare.png-fff13fead186515d6992ed5a6b190dde.stex"
+path="res://.import/grenade_launcher.png-1d80b2ba5a41c62c34802471004c6d71.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Enemies/Bullets/enemy_shotgun_flare.png"
-dest_files=[ "res://.import/enemy_shotgun_flare.png-fff13fead186515d6992ed5a6b190dde.stex" ]
+source_file="res://Sprites/Enemies/Effects/grenade_launcher.png"
+dest_files=[ "res://.import/grenade_launcher.png-1d80b2ba5a41c62c34802471004c6d71.stex" ]
 
 [params]
 
