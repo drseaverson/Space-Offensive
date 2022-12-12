@@ -14,7 +14,7 @@ var direction = Vector2.ZERO
 
 #loads bullet and gun flare
 var bullet = preload("res://Bullets/Player/PlayerBullet.tscn")
-var gun_flare = preload("res://Bullets/Player/PlayerGunFlare.tscn")
+var gun_flare = preload("res://Bullets/Gun Flares/PlayerGunFlare.tscn")
 #var rng = RandomNumberGenerator.new() random number generator (if needed)
 var can_shoot = true
 var can_melee = true
@@ -86,9 +86,6 @@ func _player_shoot():
 	bullet_temp.rotation_degrees = rotation_degrees
 	bullet_temp.apply_impulse(Vector2(), Vector2(bullet_speed, 0).rotated(rotation))
 	get_tree().get_root().add_child(bullet_temp)
-	#minor yield to display gun flare
-	yield(get_tree().create_timer(gun_flare_rate), "timeout")
-	gun_flare_temp.queue_free()
 	
 #set_physics_process(false) when player dies so you can't move
 func take_damage(damage):

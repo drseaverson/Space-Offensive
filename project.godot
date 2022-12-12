@@ -18,10 +18,16 @@ _global_script_classes=[ {
 "class": "EnemyParent",
 "language": "GDScript",
 "path": "res://Enemies/EnemyParent/Enemy.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "FlareParent",
+"language": "GDScript",
+"path": "res://Bullets/Gun Flares/GunFlareBase.gd"
 } ]
 _global_script_class_icons={
 "Bullet": "",
-"EnemyParent": ""
+"EnemyParent": "",
+"FlareParent": ""
 }
 
 [application]

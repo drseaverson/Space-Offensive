@@ -24,7 +24,6 @@ var bullet = null
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	health_bar = $HealthBar
-	health_bar.max_health_updated(health)
 	var my_player_group = get_tree().get_nodes_in_group("player")
 	for playerItem in my_player_group:
 		player = playerItem

@@ -12,6 +12,8 @@ func _ready():
 	fire_rate = 3
 	shooting_delay = 0.75
 	mag_size = 1
+	health_bar.max_health_updated(health)
+	print(enemy_name, " health updated to ", health)
 
 """func _process(delta):
 	# enemy movement function and attacking

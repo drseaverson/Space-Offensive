@@ -10,7 +10,7 @@ extends EnemyParent
 func _ready():
 	enemy_name = "Soldier"
 	bullet = load("res://Bullets/Enemy/EnemyBullet.tscn")
-	gun_flare = load("res://Bullets/Player/PlayerGunFlare.tscn")
+	gun_flare = load("res://Bullets/Gun Flares/PlayerGunFlare.tscn")
 	fire_rate = 1
 	mag_size = 12
 	
