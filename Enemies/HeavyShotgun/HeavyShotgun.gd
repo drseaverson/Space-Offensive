@@ -8,9 +8,11 @@ extends EnemyParent
 func _ready():
 	enemy_name = "Shotgunner"
 	bullet = load("res://Bullets/Enemy/EnemyBullet.tscn")
-	gun_flare = load("res://Bullets/Enemy/ShotgunFlare.tscn")
+	gun_flare = load("res://Bullets/Gun Flares/ShotgunFlare.tscn")
 	fire_rate = 1.25
 	health = 150
+	health_bar.max_health_updated(health)
+	print(enemy_name, " health updated to ", health)
 
 
 #func shoot_weapon():

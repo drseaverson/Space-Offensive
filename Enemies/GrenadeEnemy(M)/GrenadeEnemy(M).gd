@@ -6,7 +6,14 @@ extends EnemyParent
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	enemy_name = "Grenader(M)"
+	bullet = load("res://Bullets/Enemy/Grenade/Grenade.tscn")
+	gun_flare = load("res://Bullets/Gun Flares/GrenadeFlare.tscn")
+	bullet_speed = 750
+	fire_rate = 4
+	health = 200
+	health_bar.max_health_updated(health)
+	print(enemy_name, " health updated to ", health)
 	# add in proper varibale differences from parent enemy
 
 #func fire_rocket():
