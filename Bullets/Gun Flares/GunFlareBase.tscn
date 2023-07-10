@@ -2,10 +2,10 @@
 
 [ext_resource path="res://Bullets/Gun Flares/GunFlareBase.gd" type="Script" id=1]
 
-[node name="GunFlareBase" type="KinematicBody2D"]
+[node name="GunFlareBase" type="CharacterBody2D"]
 script = ExtResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 
 [node name="DestroyTimer" type="Timer" parent="."]
 

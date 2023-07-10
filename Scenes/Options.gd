@@ -4,9 +4,9 @@ extends Control
 var master_bus = AudioServer.get_bus_index("Master")
 var music_bus = AudioServer.get_bus_index("Music")
 var effects_bus = AudioServer.get_bus_index("Effects")
-export var master_music_value = -5
-export var effects_music_value = 0
-export var music_value = 0
+@export var master_music_value = -5
+@export var effects_music_value = 0
+@export var music_value = 0
 
 func _ready():
 	get_node("VBoxContainer/MasterVolume").value = master_music_value
@@ -46,5 +46,5 @@ func _on_EffectsVolume_value_changed(value):
 		AudioServer.set_bus_mute(effects_bus, false)
 
 func _on_BackButton_pressed():
-	get_tree().change_scene("res://Scenes/MainMenu.tscn")
+	get_tree().change_scene_to_file("res://Scenes/MainMenu.tscn")
 

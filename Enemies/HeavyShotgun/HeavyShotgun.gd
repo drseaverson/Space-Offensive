@@ -1,7 +1,7 @@
 extends EnemyParent
 # inheritance form main enemy type
 # inheritance currently in progress and needs more work/testing
-# heavy needs personal bullets and gun flare depending on function
+# heavy needs personal bullets and gun flare depending checked function
 
 
 # Called when the node enters the scene tree for the first time.

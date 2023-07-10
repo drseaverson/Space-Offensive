@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Sprites/Enemies/Effects/enemy_shotgun_flare.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Enemies/Effects/enemy_shotgun_flare.png" type="Texture2D" id=1]
 [ext_resource path="res://Bullets/Gun Flares/GunFlareBase.tscn" type="PackedScene" id=2]
 
 [node name="ShotgunFlare" instance=ExtResource( 2 )]
 
-[node name="Sprite" parent="." index="0"]
+[node name="Sprite2D" parent="." index="0"]
 position = Vector2( 24, 0 )
 rotation = 0.619592
 scale = Vector2( 0.5, 0.5 )

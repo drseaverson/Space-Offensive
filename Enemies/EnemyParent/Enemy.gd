@@ -1,12 +1,12 @@
-extends KinematicBody2D
+extends CharacterBody2D
 class_name EnemyParent
 
 const move_speed = 150
-export var health = 100
-export var bullet_speed = 1500
-export var mag_size = 5
-export var fire_rate = 3
-export var shooting_delay = 0
+@export var health = 100
+@export var bullet_speed = 1500
+@export var mag_size = 5
+@export var fire_rate = 3
+@export var shooting_delay = 0
 
 var health_bar = null
 var enemy_name = null
@@ -31,7 +31,9 @@ func _ready():
 func _physics_process(delta):
 	direction = Vector2.ZERO
 	get_movement()
-	#direction = move_and_slide(direction)
+	set_velocity(direction)
+	move_and_slide()
+	#direction = velocity
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -43,7 +45,7 @@ func _process(delta):
 		pass
 
 func get_movement():
-	# create and manages enemy movement based on player movement (still while firing
+	# create and manages enemy movement based checked player movement (still while firing
 	if is_shooting:
 		return
 	if player_in_range and can_shoot:
@@ -61,7 +63,7 @@ func _on_ShootingRange_body_entered(body):
 	if body == player:
 		print("player entered")
 		player_in_range = true
-		yield(get_tree().create_timer(shooting_delay), "timeout")
+		await get_tree().create_timer(shooting_delay).timeout
 		can_shoot = true
 	else:
 		pass
@@ -79,14 +81,14 @@ func shoot_weapon():
 	# create gun flare statement and display
 	# delay for weapon warmup if enemy has shooting delay (sniper)
 	if bullet != null:
-		var bullet_temp = bullet.instance()
+		var bullet_temp = bullet.instantiate()
 		bullet_temp.position = $BulletPoint.get_global_position()
 		bullet_temp.rotation_degrees = rotation_degrees
-		bullet_temp.apply_impulse(Vector2(), Vector2(bullet_speed, 0).rotated(rotation))
+		bullet_temp.apply_impulse(Vector2(bullet_speed, 0).rotated(rotation), Vector2())
 		get_tree().get_root().add_child(bullet_temp)
 		is_shooting = false
 		#minor yield to display gun flare
-		yield(get_tree().create_timer(fire_rate), "timeout")
+		await get_tree().create_timer(fire_rate).timeout
 		can_shoot = true
 
 # tracks enemy damage/health

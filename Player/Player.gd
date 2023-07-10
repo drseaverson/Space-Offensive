@@ -1,13 +1,13 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 #player value handlers
-export var move_speed = 250
-export var bullet_speed = 1500
-export var fire_rate = 0.25
+@export var move_speed = 250
+@export var bullet_speed = 1500
+@export var fire_rate = 0.25
 var gun_flare_rate = 0.05
 var reload_rate = 1.25
-export var player_health = 100
-export var pistol_mag_size = 12
+@export var player_health = 100
+@export var pistol_mag_size = 12
 var state_machine
 var direction = Vector2.ZERO
 
@@ -34,7 +34,9 @@ func _process(delta):
 #player movement management
 func _physics_process(delta):
 	get_input()
-	direction = move_and_slide(direction)
+	set_velocity(direction)
+	move_and_slide()
+	direction = velocity
 	
 func get_input():
 	direction = Vector2.ZERO
@@ -44,7 +46,7 @@ func get_input():
 		_player_shoot()
 		is_shooting = false
 		pistol_mag_size -= 1;
-		yield(get_tree().create_timer(fire_rate), "timeout")
+		await get_tree().create_timer(fire_rate).timeout
 		can_shoot = true
 		#returns early to not change animation unintentionally
 		return
@@ -54,7 +56,7 @@ func get_input():
 		is_reloading = true
 		state_machine.travel("Player_Reload_Pistol")
 		pistol_mag_size = 12
-		yield(get_tree().create_timer(reload_rate), "timeout")
+		await get_tree().create_timer(reload_rate).timeout
 		is_reloading = false
 		return
 	if Input.is_action_pressed("move_up"):
@@ -77,14 +79,14 @@ func get_input():
 func _player_shoot():
 	$Pistol.play()
 	state_machine.travel("Player_Shoot_Pistol")
-	var bullet_temp = bullet.instance()
-	var gun_flare_temp = gun_flare.instance() 
+	var bullet_temp = bullet.instantiate()
+	var gun_flare_temp = gun_flare.instantiate() 
 	gun_flare_temp.position = $BulletPoint.get_global_position()
 	gun_flare_temp.rotation_degrees = rotation_degrees
 	get_tree().get_root().add_child(gun_flare_temp)
 	bullet_temp.position = $BulletPoint.get_global_position()
 	bullet_temp.rotation_degrees = rotation_degrees
-	bullet_temp.apply_impulse(Vector2(), Vector2(bullet_speed, 0).rotated(rotation))
+	bullet_temp.apply_impulse(Vector2(bullet_speed, 0).rotated(rotation), Vector2())
 	get_tree().get_root().add_child(bullet_temp)
 	
 #set_physics_process(false) when player dies so you can't move

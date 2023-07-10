@@ -11,11 +11,11 @@ func _process(delta):
 		MusicController.play_music()
 
 func _on_StartButton_pressed():
-	get_tree().change_scene("res://Scenes/World.tscn")
+	get_tree().change_scene_to_file("res://Scenes/World.tscn")
 
 
 func _on_OptionsButton_pressed():
-	get_tree().change_scene("res://Scenes/Options.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Options.tscn")
 
 
 func _on_QuitButton_pressed():

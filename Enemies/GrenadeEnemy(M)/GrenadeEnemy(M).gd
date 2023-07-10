@@ -1,6 +1,6 @@
 extends EnemyParent
 # inherites from main enemy class type 
-# inheritance needs adjustment and proper method ovveriding to include rocket launchers on shoulder
+# inheritance needs adjustment and proper method ovveriding to include rocket launchers checked shoulder
 # no current errors as methods have not been created/tested
 
 

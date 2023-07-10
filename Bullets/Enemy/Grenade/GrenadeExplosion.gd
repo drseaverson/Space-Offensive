@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends CharacterBody2D
 # explosion radius needs testing
 # possible introduction of larger damage output the closer you are to the grenade
 # possible stun/knockback from grenade? 

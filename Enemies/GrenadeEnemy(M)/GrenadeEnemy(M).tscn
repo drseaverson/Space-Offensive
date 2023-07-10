@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Enemies/EnemyParent/Enemy.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Sprites/Enemies/Characters/enemyMajor_grande.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Enemies/Characters/enemyMajor_grande.png" type="Texture2D" id=2]
 [ext_resource path="res://Enemies/GrenadeEnemy(M)/GrenadeEnemy(M).gd" type="Script" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
@@ -11,7 +11,7 @@ radius = 53.0
 position = Vector2( -1, 23 )
 script = ExtResource( 3 )
 
-[node name="Sprite" parent="." index="0"]
+[node name="Sprite2D" parent="." index="0"]
 rotation = -2.5796
 texture = ExtResource( 2 )
 
@@ -23,11 +23,11 @@ shape = SubResource( 1 )
 position = Vector2( 94, -23 )
 
 [node name="HealthBar" parent="." index="4"]
-margin_left = -69.0
-margin_top = -88.0
-margin_right = -30.0
-margin_bottom = -47.0
-rect_scale = Vector2( 0.25, 0.25 )
+offset_left = -69.0
+offset_top = -88.0
+offset_right = -30.0
+offset_bottom = -47.0
+scale = Vector2( 0.25, 0.25 )
 
 [node name="RocketPoint" type="Node2D" parent="." index="5"]
 position = Vector2( -53, -32 )

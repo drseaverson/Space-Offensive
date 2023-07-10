@@ -28,20 +28,22 @@ func _ready():
 func _physics_process(delta):
 	direction = Vector2.ZERO
 	get_movement()
-	#direction = move_and_slide(direction)
+	set_velocity(direction)
+	move_and_slide()
+	#direction = velocity
 
 func shoot_weapon():
 	# play sniper firing warmup sound
 	# delay for sniper warmup
-	yield(get_tree().create_timer(shooting_delay), "timeout")
-	var bullet_temp = bullet.instance()
+	await get_tree().create_timer(shooting_delay).timeout
+	var bullet_temp = bullet.instantiate()
 	bullet_temp.position = $BulletPoint.get_global_position()
 	bullet_temp.rotation_degrees = rotation_degrees
-	bullet_temp.apply_impulse(Vector2(), Vector2(bullet_speed, 0).rotated(rotation))
+	bullet_temp.apply_impulse(Vector2(bullet_speed, 0).rotated(rotation), Vector2())
 	get_tree().get_root().add_child(bullet_temp)
 	is_shooting = false
 	#minor yield to display gun flare
-	yield(get_tree().create_timer(fire_rate), "timeout")
+	await get_tree().create_timer(fire_rate).timeout
 	can_shoot = true
 	
 	
@@ -50,7 +52,7 @@ func _on_ShootingRange_body_entered(body):
 	if body == player:
 		print("player entered")
 		player_in_range = true
-		yield(get_tree().create_timer(shooting_delay), "timeout")
+		await get_tree().create_timer(shooting_delay).timeout
 		can_shoot = true
 	else:
 		pass

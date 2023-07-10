@@ -2,58 +2,58 @@
 
 [ext_resource path="res://Walls/BlockWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Sprites/Background/Backround_Empty.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Background/Backround_Empty.png" type="Texture2D" id=3]
 [ext_resource path="res://Scenes/World.gd" type="Script" id=4]
 [ext_resource path="res://Walls/HorizontalWall.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Enemies/Sniper/Sniper.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Enemies/GrenadeEnemy(M)/GrenadeEnemy(M).tscn" type="PackedScene" id=7]
 
-[node name="World" type="Node2D"]
+[node name="World3D" type="Node2D"]
 script = ExtResource( 4 )
 
 [node name="Background" type="TextureRect" parent="."]
 show_behind_parent = true
-margin_top = -1.0
-margin_right = 4090.0
-margin_bottom = 2434.0
+offset_top = -1.0
+offset_right = 4090.0
+offset_bottom = 2434.0
 texture = ExtResource( 3 )
 expand = true
 
 [node name="Background4" type="TextureRect" parent="Background"]
 show_behind_parent = true
-margin_left = -3.0
-margin_top = -2396.0
-margin_right = 4093.0
-margin_bottom = 4.0
+offset_left = -3.0
+offset_top = -2396.0
+offset_right = 4093.0
+offset_bottom = 4.0
 texture = ExtResource( 3 )
 expand = true
 
 [node name="Background3" type="TextureRect" parent="Background"]
 show_behind_parent = true
-margin_left = -4095.0
-margin_top = -2401.0
-margin_right = 1.0
-margin_bottom = -1.0
+offset_left = -4095.0
+offset_top = -2401.0
+offset_right = 1.0
+offset_bottom = -1.0
 texture = ExtResource( 3 )
 expand = true
 
 [node name="Background2" type="TextureRect" parent="Background"]
 show_behind_parent = true
-margin_left = -4086.0
-margin_top = -5.0
-margin_right = 4.0
-margin_bottom = 2432.0
+offset_left = -4086.0
+offset_top = -5.0
+offset_right = 4.0
+offset_bottom = 2432.0
 texture = ExtResource( 3 )
 expand = true
 
-[node name="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+[node name="CharacterBody2D" parent="." instance=ExtResource( 2 )]
 position = Vector2( 194, 168 )
 z_index = 1
 
-[node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2( 30, 30 )
 current = true
-smoothing_enabled = true
+follow_smoothing_enabled = true
 
 [node name="Walls" type="Node2D" parent="."]
 
