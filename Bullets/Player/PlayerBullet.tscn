@@ -1,25 +1,25 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=5 format=3 uid="uid://6n2vfmn3e788"]
 
-[ext_resource path="res://Sprites/Player/player_bullets.png" type="Texture2D" id=1]
-[ext_resource path="res://Bullets/Player/PlayerBullet.gd" type="Script" id=2]
-[ext_resource path="res://Bullets/BaseBullet/BulletBase.tscn" type="PackedScene" id=3]
+[ext_resource type="Script" path="res://Bullets/Player/PlayerBullet.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://cf01joysqks7l" path="res://Bullets/BaseBullet/BulletBase.tscn" id="3"]
+[ext_resource type="Texture2D" uid="uid://wqlrv0o076u0" path="res://Sprites/Player/player_bullets.png" id="3_xydxo"]
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 26.5, 4 )
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(53, 8)
 
-[node name="PlayerBullet" instance=ExtResource( 3 )]
+[node name="PlayerBullet" instance=ExtResource("3")]
 collision_mask = 10
-script = ExtResource( 2 )
+script = ExtResource("2")
 
 [node name="CollisionShape2D" parent="." index="0"]
-position = Vector2( 12.5, 0 )
-shape = SubResource( 2 )
+position = Vector2(12.5, 0)
+shape = SubResource("2")
 
 [node name="Sprite2D" parent="." index="1"]
-position = Vector2( 13, 0 )
+position = Vector2(13, 0)
 rotation = 1.5708
-texture = ExtResource( 1 )
+texture = ExtResource("3_xydxo")
 
 [node name="VisibleOnScreenNotifier2D" parent="." index="2"]
-position = Vector2( 13.5, 2.38419e-07 )
-scale = Vector2( 2.95, 0.5 )
+position = Vector2(13.5, 2.38419e-07)
+scale = Vector2(2.95, 0.5)

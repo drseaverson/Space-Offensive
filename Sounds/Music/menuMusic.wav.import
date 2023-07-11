@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/menuMusic.wav-e60f2b69b79403659d1447492c9b2be1.sample"
+type="AudioStreamWAV"
+uid="uid://bot5qorc1eqas"
+path="res://.godot/imported/menuMusic.wav-e60f2b69b79403659d1447492c9b2be1.sample"
 
 [deps]
 
 source_file="res://Sounds/Music/menuMusic.wav"
-dest_files=[ "res://.import/menuMusic.wav-e60f2b69b79403659d1447492c9b2be1.sample" ]
+dest_files=["res://.godot/imported/menuMusic.wav-e60f2b69b79403659d1447492c9b2be1.sample"]
 
 [params]
 

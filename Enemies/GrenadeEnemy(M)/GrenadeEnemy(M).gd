@@ -13,8 +13,7 @@ func _ready():
 	fire_rate = 4
 	health = 200
 	health_bar.max_health_updated(health)
-	print(enemy_name, " health updated to ", health)
-	# add in proper varibale differences from parent enemy
+	# add in proper variable differences from parent enemy
 
 #func fire_rocket():
 	# fire rocket, with proper timing and implementation for major enemy
