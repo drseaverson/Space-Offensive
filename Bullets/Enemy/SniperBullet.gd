@@ -4,6 +4,7 @@ extends Bullet
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	damage = 20
+	speed = 1500
 
 
 func _on_SniperBullet_body_entered(body):

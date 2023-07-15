@@ -2,8 +2,7 @@ extends CharacterBody2D
 
 #player value handlers
 @export var move_speed = 250
-@export var bullet_speed = 1500
-@export var fire_rate = 0.25
+@export var fire_rate = 0.20
 var gun_flare_rate = 0.05
 var reload_rate = 1.25
 @export var player_health = 100
@@ -86,7 +85,6 @@ func _player_shoot():
 	get_tree().get_root().add_child(gun_flare_temp)
 	bullet_temp.position = $BulletPoint.get_global_position()
 	bullet_temp.rotation_degrees = rotation_degrees
-	bullet_temp.apply_impulse(Vector2(bullet_speed, 0).rotated(rotation), Vector2())
 	get_tree().get_root().add_child(bullet_temp)
 	
 #set_physics_process(false) when player dies so you can't move

@@ -1,14 +1,11 @@
 extends Bullet
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	damage = 50
+	speed = 500
+	max_range = 750 # decreased range and explodes after short bit at max range
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

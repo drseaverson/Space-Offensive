@@ -1,20 +1,34 @@
-extends RigidBody2D
+extends Area2D
 class_name Bullet
 
-@export var time_offscreen = 1
-@export var damage = 10
+var max_range = 1250
+var speed = 1000
+var damage = 10
+
+var travelled_distance = 0
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
 
-func _on_VisibilityNotifier2D_viewport_exited(viewport):
-	# possible delay for bullets to last slightly unchecked screen
-	queue_free()
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _physics_process(delta):
+	var distance = speed * delta
+	var motion = transform.x * speed * delta
+	
+	position += motion
+	
+	travelled_distance += distance
+	if travelled_distance > max_range:
+		queue_free()
 
 
-func _on_BulletBase_body_entered(body):
+
+func _on_body_entered(body):
+	if body.is_in_group("wall"):
+		print("Bullet collided with wall")
 	if !body.is_in_group("player"):
 		#create instance of explosion
 		if body.is_in_group("enemy"):

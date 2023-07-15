@@ -8,7 +8,7 @@ func _ready():
 	if MusicController.is_playing():
 		MusicController.stop_music()
 	#changes cursor to target cursor checked game start
-	Input.set_custom_mouse_cursor(target, Input.CURSOR_ARROW, Vector2(20, 20))
+	Input.set_custom_mouse_cursor(target, Input.CURSOR_ARROW, Vector2(20, 20)) 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

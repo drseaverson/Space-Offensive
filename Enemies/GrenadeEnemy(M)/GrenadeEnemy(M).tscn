@@ -1,33 +1,35 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=5 format=3 uid="uid://66i6glq40rqr"]
 
-[ext_resource path="res://Enemies/EnemyParent/Enemy.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Sprites/Enemies/Characters/enemyMajor_grande.png" type="Texture2D" id=2]
-[ext_resource path="res://Enemies/GrenadeEnemy(M)/GrenadeEnemy(M).gd" type="Script" id=3]
+[ext_resource type="PackedScene" uid="uid://bj47252iyns4b" path="res://Enemies/EnemyParent/Enemy.tscn" id="1"]
+[ext_resource type="Texture2D" uid="uid://b3p2x6kplxb1" path="res://Sprites/Enemies/Characters/enemyMajor_grande.png" id="2"]
+[ext_resource type="Script" path="res://Enemies/GrenadeEnemy(M)/GrenadeEnemy(M).gd" id="3"]
 
-[sub_resource type="CapsuleShape2D" id=1]
+[sub_resource type="CapsuleShape2D" id="1"]
 radius = 53.0
+height = 106.0
 
-[node name="GrenadeEnemy(M)" instance=ExtResource( 1 )]
-position = Vector2( -1, 23 )
-script = ExtResource( 3 )
+[node name="GrenadeEnemy(M)" instance=ExtResource("1")]
+position = Vector2(-1, 23)
+collision_mask = 11
+script = ExtResource("3")
 
 [node name="Sprite2D" parent="." index="0"]
 rotation = -2.5796
-texture = ExtResource( 2 )
+texture = ExtResource("2")
 
 [node name="CollisionShape2D" parent="." index="1"]
-position = Vector2( -26, 10 )
-shape = SubResource( 1 )
+position = Vector2(-26, 10)
+shape = SubResource("1")
 
 [node name="BulletPoint" parent="." index="2"]
-position = Vector2( 94, -23 )
+position = Vector2(94, -23)
 
 [node name="HealthBar" parent="." index="4"]
 offset_left = -69.0
 offset_top = -88.0
 offset_right = -30.0
 offset_bottom = -47.0
-scale = Vector2( 0.25, 0.25 )
+scale = Vector2(0.25, 0.25)
 
 [node name="RocketPoint" type="Node2D" parent="." index="5"]
-position = Vector2( -53, -32 )
+position = Vector2(-53, -32)
