@@ -1,1 +1,15 @@
 res://Bullets/Player/PlayerBullet.tscn
+res://Player/Player.tscn
+res://Bullets/Gun Flares/PlayerGunFlare.tscn
+res://Bullets/Gun Flares/GunFlareBase.gd
+res://Scenes/MainMenu.tscn
+res://Bullets/BaseBullet/BulletBase.tscn
+res://Walls/BuildingParent.tscn
+res://Walls/HorizontalWall.tscn
+res://Walls/BuildingParent.gd
+res://Walls/BlockWall.tscn
+res://Walls/VerticalWall.tscn
+res://Walls/BlockWall.gd
+res://Walls/HorizontalWall.gd
+res://Walls/VerticalWall.gd
+res://Scenes/World.tscn

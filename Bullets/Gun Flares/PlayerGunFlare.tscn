@@ -1,12 +1,12 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://dn2kgwtrv08af"]
 
-[ext_resource path="res://Sprites/Player/player_gun_flare.png" type="Texture2D" id=1]
-[ext_resource path="res://Bullets/Gun Flares/GunFlareBase.tscn" type="PackedScene" id=2]
+[ext_resource type="Texture2D" uid="uid://dptlu23rwf6uh" path="res://Sprites/Player/player_gun_flare.png" id="1"]
+[ext_resource type="PackedScene" path="res://Bullets/Gun Flares/GunFlareBase.tscn" id="2"]
 
-[node name="PlayerGunFlare" instance=ExtResource( 2 )]
+[node name="PlayerGunFlare" instance=ExtResource("2")]
 
 [node name="Sprite2D" parent="." index="0"]
-position = Vector2( 54, 1 )
+position = Vector2(54, 1)
 rotation = 0.650367
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 1 )
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1")

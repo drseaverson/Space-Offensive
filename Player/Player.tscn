@@ -1,681 +1,827 @@
-[gd_scene load_steps=110 format=2]
-
-[ext_resource path="res://Sprites/Player/Pistol/Player_Move_Pistol.png" type="Texture2D" id=1]
-[ext_resource path="res://Sprites/Player/Pistol/Player_Melee_Pistol.png" type="Texture2D" id=2]
-[ext_resource path="res://Sprites/Player/Pistol/Player_Shoot_Pistol.png" type="Texture2D" id=3]
-[ext_resource path="res://Sprites/Player/Pistol/Player_Reload_Pistol.png" type="Texture2D" id=4]
-[ext_resource path="res://Sprites/Player/Pistol/Player_Idle_Pistol.png" type="Texture2D" id=5]
-[ext_resource path="res://Player/Player.gd" type="Script" id=6]
-[ext_resource path="res://Sounds/Effects/pistol.ogg" type="AudioStream" id=7]
-[ext_resource path="res://Sounds/Effects/outofammo.ogg" type="AudioStream" id=8]
-
-[sub_resource type="AtlasTexture" id=2]
-flags = 4
-atlas = ExtResource( 5 )
-region = Rect2( 0, 0, 253, 216 )
-
-[sub_resource type="AtlasTexture" id=3]
-flags = 4
-atlas = ExtResource( 5 )
-region = Rect2( 253, 0, 253, 216 )
-
-[sub_resource type="AtlasTexture" id=4]
-flags = 4
-atlas = ExtResource( 5 )
-region = Rect2( 506, 0, 253, 216 )
-
-[sub_resource type="AtlasTexture" id=5]
-flags = 4
-atlas = ExtResource( 5 )
-region = Rect2( 759, 0, 253, 216 )
-
-[sub_resource type="AtlasTexture" id=6]
-flags = 4
-atlas = ExtResource( 5 )
-region = Rect2( 1012, 0, 253, 216 )
-
-[sub_resource type="AtlasTexture" id=7]
-flags = 4
-atlas = ExtResource( 5 )
-region = Rect2( 1265, 0, 253, 216 )
-
-[sub_resource type="AtlasTexture" id=8]
-flags = 4
-atlas = ExtResource( 5 )
-region = Rect2( 1518, 0, 253, 216 )
-
-[sub_resource type="AtlasTexture" id=9]
-flags = 4
-atlas = ExtResource( 5 )
-region = Rect2( 1771, 0, 253, 216 )
-
-[sub_resource type="AtlasTexture" id=10]
-flags = 4
-atlas = ExtResource( 5 )
-region = Rect2( 2024, 0, 253, 216 )
-
-[sub_resource type="AtlasTexture" id=11]
-flags = 4
-atlas = ExtResource( 5 )
-region = Rect2( 2277, 0, 253, 216 )
-
-[sub_resource type="AtlasTexture" id=12]
-flags = 4
-atlas = ExtResource( 5 )
-region = Rect2( 2530, 0, 253, 216 )
-
-[sub_resource type="AtlasTexture" id=13]
-flags = 4
-atlas = ExtResource( 5 )
-region = Rect2( 2783, 0, 253, 216 )
-
-[sub_resource type="AtlasTexture" id=14]
-flags = 4
-atlas = ExtResource( 5 )
-region = Rect2( 3036, 0, 253, 216 )
-
-[sub_resource type="AtlasTexture" id=15]
-flags = 4
-atlas = ExtResource( 5 )
-region = Rect2( 3289, 0, 253, 216 )
-
-[sub_resource type="AtlasTexture" id=16]
-flags = 4
-atlas = ExtResource( 5 )
-region = Rect2( 3542, 0, 253, 216 )
-
-[sub_resource type="AtlasTexture" id=17]
-flags = 4
-atlas = ExtResource( 5 )
-region = Rect2( 3795, 0, 253, 216 )
-
-[sub_resource type="AtlasTexture" id=18]
-flags = 4
-atlas = ExtResource( 5 )
-region = Rect2( 0, 216, 253, 216 )
-
-[sub_resource type="AtlasTexture" id=19]
-flags = 4
-atlas = ExtResource( 5 )
-region = Rect2( 253, 216, 253, 216 )
-
-[sub_resource type="AtlasTexture" id=20]
-flags = 4
-atlas = ExtResource( 5 )
-region = Rect2( 506, 216, 253, 216 )
-
-[sub_resource type="AtlasTexture" id=21]
-flags = 4
-atlas = ExtResource( 5 )
-region = Rect2( 759, 216, 253, 216 )
-
-[sub_resource type="AtlasTexture" id=22]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 0, 0, 291, 256 )
-
-[sub_resource type="AtlasTexture" id=23]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 291, 0, 291, 256 )
-
-[sub_resource type="AtlasTexture" id=24]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 582, 0, 291, 256 )
-
-[sub_resource type="AtlasTexture" id=25]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 873, 0, 291, 256 )
-
-[sub_resource type="AtlasTexture" id=26]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 1164, 0, 291, 256 )
-
-[sub_resource type="AtlasTexture" id=27]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 1455, 0, 291, 256 )
-
-[sub_resource type="AtlasTexture" id=28]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 1746, 0, 291, 256 )
-
-[sub_resource type="AtlasTexture" id=29]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 2037, 0, 291, 256 )
-
-[sub_resource type="AtlasTexture" id=30]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 2328, 0, 291, 256 )
-
-[sub_resource type="AtlasTexture" id=31]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 2619, 0, 291, 256 )
-
-[sub_resource type="AtlasTexture" id=32]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 2910, 0, 291, 256 )
-
-[sub_resource type="AtlasTexture" id=33]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 3201, 0, 291, 256 )
-
-[sub_resource type="AtlasTexture" id=34]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 3492, 0, 291, 256 )
-
-[sub_resource type="AtlasTexture" id=35]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 3783, 0, 291, 256 )
-
-[sub_resource type="AtlasTexture" id=36]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 0, 256, 291, 256 )
-
-[sub_resource type="AtlasTexture" id=37]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 258, 220 )
-
-[sub_resource type="AtlasTexture" id=38]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 258, 0, 258, 220 )
-
-[sub_resource type="AtlasTexture" id=39]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 516, 0, 258, 220 )
-
-[sub_resource type="AtlasTexture" id=40]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 774, 0, 258, 220 )
-
-[sub_resource type="AtlasTexture" id=41]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 1032, 0, 258, 220 )
-
-[sub_resource type="AtlasTexture" id=42]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 1290, 0, 258, 220 )
-
-[sub_resource type="AtlasTexture" id=43]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 1548, 0, 258, 220 )
-
-[sub_resource type="AtlasTexture" id=44]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 1806, 0, 258, 220 )
-
-[sub_resource type="AtlasTexture" id=45]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 2064, 0, 258, 220 )
-
-[sub_resource type="AtlasTexture" id=46]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 2322, 0, 258, 220 )
-
-[sub_resource type="AtlasTexture" id=47]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 2580, 0, 258, 220 )
-
-[sub_resource type="AtlasTexture" id=48]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 2838, 0, 258, 220 )
-
-[sub_resource type="AtlasTexture" id=49]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 3096, 0, 258, 220 )
-
-[sub_resource type="AtlasTexture" id=50]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 3354, 0, 258, 220 )
-
-[sub_resource type="AtlasTexture" id=51]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 3612, 0, 258, 220 )
-
-[sub_resource type="AtlasTexture" id=52]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 0, 220, 258, 220 )
-
-[sub_resource type="AtlasTexture" id=53]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 258, 220, 258, 220 )
-
-[sub_resource type="AtlasTexture" id=54]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 516, 220, 258, 220 )
-
-[sub_resource type="AtlasTexture" id=55]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 774, 220, 258, 220 )
-
-[sub_resource type="AtlasTexture" id=56]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 1032, 220, 258, 220 )
-
-[sub_resource type="AtlasTexture" id=57]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 0, 0, 260, 230 )
-
-[sub_resource type="AtlasTexture" id=58]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 260, 0, 260, 230 )
-
-[sub_resource type="AtlasTexture" id=59]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 520, 0, 260, 230 )
-
-[sub_resource type="AtlasTexture" id=60]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 780, 0, 260, 230 )
-
-[sub_resource type="AtlasTexture" id=61]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 1040, 0, 260, 230 )
-
-[sub_resource type="AtlasTexture" id=62]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 1300, 0, 260, 230 )
-
-[sub_resource type="AtlasTexture" id=63]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 1560, 0, 260, 230 )
-
-[sub_resource type="AtlasTexture" id=64]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 1820, 0, 260, 230 )
-
-[sub_resource type="AtlasTexture" id=65]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 2080, 0, 260, 230 )
-
-[sub_resource type="AtlasTexture" id=66]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 2340, 0, 260, 230 )
-
-[sub_resource type="AtlasTexture" id=67]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 2600, 0, 260, 230 )
-
-[sub_resource type="AtlasTexture" id=68]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 2860, 0, 260, 230 )
-
-[sub_resource type="AtlasTexture" id=69]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 3120, 0, 260, 230 )
-
-[sub_resource type="AtlasTexture" id=70]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 3380, 0, 260, 230 )
-
-[sub_resource type="AtlasTexture" id=71]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 3640, 0, 260, 230 )
-
-[sub_resource type="AtlasTexture" id=72]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 0, 0, 255, 215 )
-
-[sub_resource type="AtlasTexture" id=73]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 255, 0, 255, 215 )
-
-[sub_resource type="AtlasTexture" id=74]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 510, 0, 255, 215 )
-
-[sub_resource type="SpriteFrames" id=75]
-animations = [ {
-"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ) ],
+[gd_scene load_steps=110 format=3 uid="uid://bi6tuwjp2dhtj"]
+
+[ext_resource type="Texture2D" uid="uid://dlu2tp2xfisvn" path="res://Sprites/Player/Pistol/Player_Move_Pistol.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://idyensmd0p7i" path="res://Sprites/Player/Pistol/Player_Melee_Pistol.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://ca63a6anugjpi" path="res://Sprites/Player/Pistol/Player_Shoot_Pistol.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://cd3nhop4ojg3b" path="res://Sprites/Player/Pistol/Player_Reload_Pistol.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://ceetyrbvhdga3" path="res://Sprites/Player/Pistol/Player_Idle_Pistol.png" id="5"]
+[ext_resource type="Script" path="res://Player/Player.gd" id="6"]
+[ext_resource type="AudioStream" uid="uid://26k0swdrk205" path="res://Sounds/Effects/pistol.ogg" id="7"]
+[ext_resource type="AudioStream" uid="uid://cn5bm58c0vb32" path="res://Sounds/Effects/outofammo.ogg" id="8"]
+
+[sub_resource type="AtlasTexture" id="2"]
+atlas = ExtResource("5")
+region = Rect2(0, 0, 253, 216)
+
+[sub_resource type="AtlasTexture" id="3"]
+atlas = ExtResource("5")
+region = Rect2(253, 0, 253, 216)
+
+[sub_resource type="AtlasTexture" id="4"]
+atlas = ExtResource("5")
+region = Rect2(506, 0, 253, 216)
+
+[sub_resource type="AtlasTexture" id="5"]
+atlas = ExtResource("5")
+region = Rect2(759, 0, 253, 216)
+
+[sub_resource type="AtlasTexture" id="6"]
+atlas = ExtResource("5")
+region = Rect2(1012, 0, 253, 216)
+
+[sub_resource type="AtlasTexture" id="7"]
+atlas = ExtResource("5")
+region = Rect2(1265, 0, 253, 216)
+
+[sub_resource type="AtlasTexture" id="8"]
+atlas = ExtResource("5")
+region = Rect2(1518, 0, 253, 216)
+
+[sub_resource type="AtlasTexture" id="9"]
+atlas = ExtResource("5")
+region = Rect2(1771, 0, 253, 216)
+
+[sub_resource type="AtlasTexture" id="10"]
+atlas = ExtResource("5")
+region = Rect2(2024, 0, 253, 216)
+
+[sub_resource type="AtlasTexture" id="11"]
+atlas = ExtResource("5")
+region = Rect2(2277, 0, 253, 216)
+
+[sub_resource type="AtlasTexture" id="12"]
+atlas = ExtResource("5")
+region = Rect2(2530, 0, 253, 216)
+
+[sub_resource type="AtlasTexture" id="13"]
+atlas = ExtResource("5")
+region = Rect2(2783, 0, 253, 216)
+
+[sub_resource type="AtlasTexture" id="14"]
+atlas = ExtResource("5")
+region = Rect2(3036, 0, 253, 216)
+
+[sub_resource type="AtlasTexture" id="15"]
+atlas = ExtResource("5")
+region = Rect2(3289, 0, 253, 216)
+
+[sub_resource type="AtlasTexture" id="16"]
+atlas = ExtResource("5")
+region = Rect2(3542, 0, 253, 216)
+
+[sub_resource type="AtlasTexture" id="17"]
+atlas = ExtResource("5")
+region = Rect2(3795, 0, 253, 216)
+
+[sub_resource type="AtlasTexture" id="18"]
+atlas = ExtResource("5")
+region = Rect2(0, 216, 253, 216)
+
+[sub_resource type="AtlasTexture" id="19"]
+atlas = ExtResource("5")
+region = Rect2(253, 216, 253, 216)
+
+[sub_resource type="AtlasTexture" id="20"]
+atlas = ExtResource("5")
+region = Rect2(506, 216, 253, 216)
+
+[sub_resource type="AtlasTexture" id="21"]
+atlas = ExtResource("5")
+region = Rect2(759, 216, 253, 216)
+
+[sub_resource type="AtlasTexture" id="22"]
+atlas = ExtResource("2")
+region = Rect2(0, 0, 291, 256)
+
+[sub_resource type="AtlasTexture" id="23"]
+atlas = ExtResource("2")
+region = Rect2(291, 0, 291, 256)
+
+[sub_resource type="AtlasTexture" id="24"]
+atlas = ExtResource("2")
+region = Rect2(582, 0, 291, 256)
+
+[sub_resource type="AtlasTexture" id="25"]
+atlas = ExtResource("2")
+region = Rect2(873, 0, 291, 256)
+
+[sub_resource type="AtlasTexture" id="26"]
+atlas = ExtResource("2")
+region = Rect2(1164, 0, 291, 256)
+
+[sub_resource type="AtlasTexture" id="27"]
+atlas = ExtResource("2")
+region = Rect2(1455, 0, 291, 256)
+
+[sub_resource type="AtlasTexture" id="28"]
+atlas = ExtResource("2")
+region = Rect2(1746, 0, 291, 256)
+
+[sub_resource type="AtlasTexture" id="29"]
+atlas = ExtResource("2")
+region = Rect2(2037, 0, 291, 256)
+
+[sub_resource type="AtlasTexture" id="30"]
+atlas = ExtResource("2")
+region = Rect2(2328, 0, 291, 256)
+
+[sub_resource type="AtlasTexture" id="31"]
+atlas = ExtResource("2")
+region = Rect2(2619, 0, 291, 256)
+
+[sub_resource type="AtlasTexture" id="32"]
+atlas = ExtResource("2")
+region = Rect2(2910, 0, 291, 256)
+
+[sub_resource type="AtlasTexture" id="33"]
+atlas = ExtResource("2")
+region = Rect2(3201, 0, 291, 256)
+
+[sub_resource type="AtlasTexture" id="34"]
+atlas = ExtResource("2")
+region = Rect2(3492, 0, 291, 256)
+
+[sub_resource type="AtlasTexture" id="35"]
+atlas = ExtResource("2")
+region = Rect2(3783, 0, 291, 256)
+
+[sub_resource type="AtlasTexture" id="36"]
+atlas = ExtResource("2")
+region = Rect2(0, 256, 291, 256)
+
+[sub_resource type="AtlasTexture" id="37"]
+atlas = ExtResource("1")
+region = Rect2(0, 0, 258, 220)
+
+[sub_resource type="AtlasTexture" id="38"]
+atlas = ExtResource("1")
+region = Rect2(258, 0, 258, 220)
+
+[sub_resource type="AtlasTexture" id="39"]
+atlas = ExtResource("1")
+region = Rect2(516, 0, 258, 220)
+
+[sub_resource type="AtlasTexture" id="40"]
+atlas = ExtResource("1")
+region = Rect2(774, 0, 258, 220)
+
+[sub_resource type="AtlasTexture" id="41"]
+atlas = ExtResource("1")
+region = Rect2(1032, 0, 258, 220)
+
+[sub_resource type="AtlasTexture" id="42"]
+atlas = ExtResource("1")
+region = Rect2(1290, 0, 258, 220)
+
+[sub_resource type="AtlasTexture" id="43"]
+atlas = ExtResource("1")
+region = Rect2(1548, 0, 258, 220)
+
+[sub_resource type="AtlasTexture" id="44"]
+atlas = ExtResource("1")
+region = Rect2(1806, 0, 258, 220)
+
+[sub_resource type="AtlasTexture" id="45"]
+atlas = ExtResource("1")
+region = Rect2(2064, 0, 258, 220)
+
+[sub_resource type="AtlasTexture" id="46"]
+atlas = ExtResource("1")
+region = Rect2(2322, 0, 258, 220)
+
+[sub_resource type="AtlasTexture" id="47"]
+atlas = ExtResource("1")
+region = Rect2(2580, 0, 258, 220)
+
+[sub_resource type="AtlasTexture" id="48"]
+atlas = ExtResource("1")
+region = Rect2(2838, 0, 258, 220)
+
+[sub_resource type="AtlasTexture" id="49"]
+atlas = ExtResource("1")
+region = Rect2(3096, 0, 258, 220)
+
+[sub_resource type="AtlasTexture" id="50"]
+atlas = ExtResource("1")
+region = Rect2(3354, 0, 258, 220)
+
+[sub_resource type="AtlasTexture" id="51"]
+atlas = ExtResource("1")
+region = Rect2(3612, 0, 258, 220)
+
+[sub_resource type="AtlasTexture" id="52"]
+atlas = ExtResource("1")
+region = Rect2(0, 220, 258, 220)
+
+[sub_resource type="AtlasTexture" id="53"]
+atlas = ExtResource("1")
+region = Rect2(258, 220, 258, 220)
+
+[sub_resource type="AtlasTexture" id="54"]
+atlas = ExtResource("1")
+region = Rect2(516, 220, 258, 220)
+
+[sub_resource type="AtlasTexture" id="55"]
+atlas = ExtResource("1")
+region = Rect2(774, 220, 258, 220)
+
+[sub_resource type="AtlasTexture" id="56"]
+atlas = ExtResource("1")
+region = Rect2(1032, 220, 258, 220)
+
+[sub_resource type="AtlasTexture" id="57"]
+atlas = ExtResource("4")
+region = Rect2(0, 0, 260, 230)
+
+[sub_resource type="AtlasTexture" id="58"]
+atlas = ExtResource("4")
+region = Rect2(260, 0, 260, 230)
+
+[sub_resource type="AtlasTexture" id="59"]
+atlas = ExtResource("4")
+region = Rect2(520, 0, 260, 230)
+
+[sub_resource type="AtlasTexture" id="60"]
+atlas = ExtResource("4")
+region = Rect2(780, 0, 260, 230)
+
+[sub_resource type="AtlasTexture" id="61"]
+atlas = ExtResource("4")
+region = Rect2(1040, 0, 260, 230)
+
+[sub_resource type="AtlasTexture" id="62"]
+atlas = ExtResource("4")
+region = Rect2(1300, 0, 260, 230)
+
+[sub_resource type="AtlasTexture" id="63"]
+atlas = ExtResource("4")
+region = Rect2(1560, 0, 260, 230)
+
+[sub_resource type="AtlasTexture" id="64"]
+atlas = ExtResource("4")
+region = Rect2(1820, 0, 260, 230)
+
+[sub_resource type="AtlasTexture" id="65"]
+atlas = ExtResource("4")
+region = Rect2(2080, 0, 260, 230)
+
+[sub_resource type="AtlasTexture" id="66"]
+atlas = ExtResource("4")
+region = Rect2(2340, 0, 260, 230)
+
+[sub_resource type="AtlasTexture" id="67"]
+atlas = ExtResource("4")
+region = Rect2(2600, 0, 260, 230)
+
+[sub_resource type="AtlasTexture" id="68"]
+atlas = ExtResource("4")
+region = Rect2(2860, 0, 260, 230)
+
+[sub_resource type="AtlasTexture" id="69"]
+atlas = ExtResource("4")
+region = Rect2(3120, 0, 260, 230)
+
+[sub_resource type="AtlasTexture" id="70"]
+atlas = ExtResource("4")
+region = Rect2(3380, 0, 260, 230)
+
+[sub_resource type="AtlasTexture" id="71"]
+atlas = ExtResource("4")
+region = Rect2(3640, 0, 260, 230)
+
+[sub_resource type="AtlasTexture" id="72"]
+atlas = ExtResource("3")
+region = Rect2(0, 0, 255, 215)
+
+[sub_resource type="AtlasTexture" id="73"]
+atlas = ExtResource("3")
+region = Rect2(255, 0, 255, 215)
+
+[sub_resource type="AtlasTexture" id="74"]
+atlas = ExtResource("3")
+region = Rect2(510, 0, 255, 215)
+
+[sub_resource type="SpriteFrames" id="75"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("2")
+}, {
+"duration": 1.0,
+"texture": SubResource("3")
+}, {
+"duration": 1.0,
+"texture": SubResource("4")
+}, {
+"duration": 1.0,
+"texture": SubResource("5")
+}, {
+"duration": 1.0,
+"texture": SubResource("6")
+}, {
+"duration": 1.0,
+"texture": SubResource("7")
+}, {
+"duration": 1.0,
+"texture": SubResource("8")
+}, {
+"duration": 1.0,
+"texture": SubResource("9")
+}, {
+"duration": 1.0,
+"texture": SubResource("10")
+}, {
+"duration": 1.0,
+"texture": SubResource("11")
+}, {
+"duration": 1.0,
+"texture": SubResource("12")
+}, {
+"duration": 1.0,
+"texture": SubResource("13")
+}, {
+"duration": 1.0,
+"texture": SubResource("14")
+}, {
+"duration": 1.0,
+"texture": SubResource("15")
+}, {
+"duration": 1.0,
+"texture": SubResource("16")
+}, {
+"duration": 1.0,
+"texture": SubResource("17")
+}, {
+"duration": 1.0,
+"texture": SubResource("18")
+}, {
+"duration": 1.0,
+"texture": SubResource("19")
+}, {
+"duration": 1.0,
+"texture": SubResource("20")
+}, {
+"duration": 1.0,
+"texture": SubResource("21")
+}],
 "loop": true,
-"name": "Player_Idle_Pistol",
+"name": &"Player_Idle_Pistol",
 "speed": 10.0
 }, {
-"frames": [ SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ) ],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("22")
+}, {
+"duration": 1.0,
+"texture": SubResource("23")
+}, {
+"duration": 1.0,
+"texture": SubResource("24")
+}, {
+"duration": 1.0,
+"texture": SubResource("25")
+}, {
+"duration": 1.0,
+"texture": SubResource("26")
+}, {
+"duration": 1.0,
+"texture": SubResource("27")
+}, {
+"duration": 1.0,
+"texture": SubResource("28")
+}, {
+"duration": 1.0,
+"texture": SubResource("29")
+}, {
+"duration": 1.0,
+"texture": SubResource("30")
+}, {
+"duration": 1.0,
+"texture": SubResource("31")
+}, {
+"duration": 1.0,
+"texture": SubResource("32")
+}, {
+"duration": 1.0,
+"texture": SubResource("33")
+}, {
+"duration": 1.0,
+"texture": SubResource("34")
+}, {
+"duration": 1.0,
+"texture": SubResource("35")
+}, {
+"duration": 1.0,
+"texture": SubResource("36")
+}],
 "loop": false,
-"name": "Player_Melee_Pistol",
+"name": &"Player_Melee_Pistol",
 "speed": 12.0
 }, {
-"frames": [ SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ) ],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("37")
+}, {
+"duration": 1.0,
+"texture": SubResource("38")
+}, {
+"duration": 1.0,
+"texture": SubResource("39")
+}, {
+"duration": 1.0,
+"texture": SubResource("40")
+}, {
+"duration": 1.0,
+"texture": SubResource("41")
+}, {
+"duration": 1.0,
+"texture": SubResource("42")
+}, {
+"duration": 1.0,
+"texture": SubResource("43")
+}, {
+"duration": 1.0,
+"texture": SubResource("44")
+}, {
+"duration": 1.0,
+"texture": SubResource("45")
+}, {
+"duration": 1.0,
+"texture": SubResource("46")
+}, {
+"duration": 1.0,
+"texture": SubResource("47")
+}, {
+"duration": 1.0,
+"texture": SubResource("48")
+}, {
+"duration": 1.0,
+"texture": SubResource("49")
+}, {
+"duration": 1.0,
+"texture": SubResource("50")
+}, {
+"duration": 1.0,
+"texture": SubResource("51")
+}, {
+"duration": 1.0,
+"texture": SubResource("52")
+}, {
+"duration": 1.0,
+"texture": SubResource("53")
+}, {
+"duration": 1.0,
+"texture": SubResource("54")
+}, {
+"duration": 1.0,
+"texture": SubResource("55")
+}, {
+"duration": 1.0,
+"texture": SubResource("56")
+}],
 "loop": true,
-"name": "Player_Move_Pistol",
+"name": &"Player_Move_Pistol",
 "speed": 10.0
 }, {
-"frames": [ SubResource( 57 ), SubResource( 58 ), SubResource( 59 ), SubResource( 60 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 67 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ), SubResource( 71 ) ],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("57")
+}, {
+"duration": 1.0,
+"texture": SubResource("58")
+}, {
+"duration": 1.0,
+"texture": SubResource("59")
+}, {
+"duration": 1.0,
+"texture": SubResource("60")
+}, {
+"duration": 1.0,
+"texture": SubResource("61")
+}, {
+"duration": 1.0,
+"texture": SubResource("62")
+}, {
+"duration": 1.0,
+"texture": SubResource("63")
+}, {
+"duration": 1.0,
+"texture": SubResource("64")
+}, {
+"duration": 1.0,
+"texture": SubResource("65")
+}, {
+"duration": 1.0,
+"texture": SubResource("66")
+}, {
+"duration": 1.0,
+"texture": SubResource("67")
+}, {
+"duration": 1.0,
+"texture": SubResource("68")
+}, {
+"duration": 1.0,
+"texture": SubResource("69")
+}, {
+"duration": 1.0,
+"texture": SubResource("70")
+}, {
+"duration": 1.0,
+"texture": SubResource("71")
+}],
 "loop": false,
-"name": "Player_Reload_Pistol",
+"name": &"Player_Reload_Pistol",
 "speed": 10.0
 }, {
-"frames": [ SubResource( 72 ), SubResource( 73 ), SubResource( 74 ) ],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("72")
+}, {
+"duration": 1.0,
+"texture": SubResource("73")
+}, {
+"duration": 1.0,
+"texture": SubResource("74")
+}],
 "loop": false,
-"name": "Player_Shoot_Pistol",
+"name": &"Player_Shoot_Pistol",
 "speed": 8.0
-} ]
+}]
 
-[sub_resource type="Animation" id=76]
+[sub_resource type="Animation" id="76"]
 resource_name = "Player_Idle_Pistol"
 length = 1.8
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ "Player_Idle_Pistol" ]
+"values": ["Player_Idle_Pistol"]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath(".:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PackedFloat32Array( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 ]
+"values": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
 }
 
-[sub_resource type="Animation" id=77]
+[sub_resource type="Animation" id="77"]
 resource_name = "Player_Melee_Pistol"
 length = 1.4
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ "Player_Melee_Pistol" ]
+"values": ["Player_Melee_Pistol"]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath(".:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PackedFloat32Array( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ]
+"values": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
 }
 
-[sub_resource type="Animation" id=78]
+[sub_resource type="Animation" id="78"]
 resource_name = "Player_Move_Pistol"
 length = 1.8
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ "Player_Move_Pistol" ]
+"values": ["Player_Move_Pistol"]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath(".:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PackedFloat32Array( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 ]
+"values": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
 }
 
-[sub_resource type="Animation" id=79]
+[sub_resource type="Animation" id="79"]
 resource_name = "Player_Reload_Pistol"
 length = 1.4
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ "Player_Reload_Pistol" ]
+"values": ["Player_Reload_Pistol"]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath(".:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PackedFloat32Array( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ]
+"values": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
 }
 
-[sub_resource type="Animation" id=80]
+[sub_resource type="Animation" id="80"]
 resource_name = "Player_Shoot_Pistol"
 length = 0.3
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ "Player_Shoot_Pistol" ]
+"values": ["Player_Shoot_Pistol"]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath(".:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PackedFloat32Array( 0, 0.1 ),
-"transitions": PackedFloat32Array( 1, 1 ),
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [ 1, 2 ]
+"values": [1, 2]
 }
 
-[sub_resource type="Animation" id=81]
+[sub_resource type="Animation" id="81"]
 length = 0.001
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ "Player_Idle_Pistol" ]
+"values": ["Player_Idle_Pistol"]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath(".:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ 0 ]
+"values": [0]
 }
 
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 34.0
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qpo45"]
+_data = {
+"Player_Idle_Pistol": SubResource("76"),
+"Player_Melee_Pistol": SubResource("77"),
+"Player_Move_Pistol": SubResource("78"),
+"Player_Reload_Pistol": SubResource("79"),
+"Player_Shoot_Pistol": SubResource("80"),
+"RESET": SubResource("81")
+}
+
+[sub_resource type="CapsuleShape2D" id="1"]
+radius = 2.0
 height = 4.0
 
-[sub_resource type="AnimationNodeAnimation" id=82]
-animation = "Player_Idle_Pistol"
+[sub_resource type="AnimationNodeAnimation" id="82"]
+animation = &"Player_Idle_Pistol"
 
-[sub_resource type="AnimationNodeAnimation" id=83]
-animation = "Player_Melee_Pistol"
+[sub_resource type="AnimationNodeAnimation" id="83"]
+animation = &"Player_Melee_Pistol"
 
-[sub_resource type="AnimationNodeAnimation" id=84]
-animation = "Player_Move_Pistol"
+[sub_resource type="AnimationNodeAnimation" id="84"]
+animation = &"Player_Move_Pistol"
 
-[sub_resource type="AnimationNodeAnimation" id=85]
-animation = "Player_Reload_Pistol"
+[sub_resource type="AnimationNodeAnimation" id="85"]
+animation = &"Player_Reload_Pistol"
 
-[sub_resource type="AnimationNodeAnimation" id=86]
-animation = "Player_Shoot_Pistol"
+[sub_resource type="AnimationNodeAnimation" id="86"]
+animation = &"Player_Shoot_Pistol"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=91]
+[sub_resource type="AnimationNodeStateMachineTransition" id="91"]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=92]
+[sub_resource type="AnimationNodeStateMachineTransition" id="92"]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=93]
+[sub_resource type="AnimationNodeStateMachineTransition" id="93"]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=94]
+[sub_resource type="AnimationNodeStateMachineTransition" id="94"]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=95]
-switch_mode = 2
-auto_advance = true
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=96]
-switch_mode = 2
-auto_advance = true
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=97]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=98]
-switch_mode = 2
-auto_advance = true
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=106]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=107]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=108]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=109]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=110]
+[sub_resource type="AnimationNodeStateMachineTransition" id="95"]
 switch_mode = 2
 
-[sub_resource type="AnimationNodeStateMachine" id=104]
-states/Player_Idle_Pistol/node = SubResource( 82 )
-states/Player_Idle_Pistol/position = Vector2( 642, 29 )
-states/Player_Melee_Pistol/node = SubResource( 83 )
-states/Player_Melee_Pistol/position = Vector2( 516.47, 217.36 )
-states/Player_Move_Pistol/node = SubResource( 84 )
-states/Player_Move_Pistol/position = Vector2( 802.47, 225.36 )
-states/Player_Reload_Pistol/node = SubResource( 85 )
-states/Player_Reload_Pistol/position = Vector2( 324.47, 103.36 )
-states/Player_Shoot_Pistol/node = SubResource( 86 )
-states/Player_Shoot_Pistol/position = Vector2( 960.47, 103.36 )
-transitions = [ "Player_Idle_Pistol", "Player_Melee_Pistol", SubResource( 91 ), "Player_Idle_Pistol", "Player_Move_Pistol", SubResource( 92 ), "Player_Idle_Pistol", "Player_Reload_Pistol", SubResource( 93 ), "Player_Idle_Pistol", "Player_Shoot_Pistol", SubResource( 94 ), "Player_Reload_Pistol", "Player_Idle_Pistol", SubResource( 95 ), "Player_Shoot_Pistol", "Player_Idle_Pistol", SubResource( 96 ), "Player_Move_Pistol", "Player_Idle_Pistol", SubResource( 97 ), "Player_Melee_Pistol", "Player_Idle_Pistol", SubResource( 98 ), "Player_Move_Pistol", "Player_Shoot_Pistol", SubResource( 106 ), "Player_Move_Pistol", "Player_Melee_Pistol", SubResource( 107 ), "Player_Move_Pistol", "Player_Reload_Pistol", SubResource( 108 ), "Player_Shoot_Pistol", "Player_Reload_Pistol", SubResource( 109 ), "Player_Reload_Pistol", "Player_Shoot_Pistol", SubResource( 110 ) ]
-start_node = "Player_Idle_Pistol"
-graph_offset = Vector2( -80.5794, -137.22 )
+[sub_resource type="AnimationNodeStateMachineTransition" id="96"]
+switch_mode = 2
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=105]
+[sub_resource type="AnimationNodeStateMachineTransition" id="97"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="98"]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="106"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="107"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="108"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="109"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="110"]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="104"]
+states/Player_Idle_Pistol/node = SubResource("82")
+states/Player_Idle_Pistol/position = Vector2(642, 29)
+states/Player_Melee_Pistol/node = SubResource("83")
+states/Player_Melee_Pistol/position = Vector2(516.47, 217.36)
+states/Player_Move_Pistol/node = SubResource("84")
+states/Player_Move_Pistol/position = Vector2(802.47, 225.36)
+states/Player_Reload_Pistol/node = SubResource("85")
+states/Player_Reload_Pistol/position = Vector2(324.47, 103.36)
+states/Player_Shoot_Pistol/node = SubResource("86")
+states/Player_Shoot_Pistol/position = Vector2(960.47, 103.36)
+transitions = ["Player_Idle_Pistol", "Player_Melee_Pistol", SubResource("91"), "Player_Idle_Pistol", "Player_Move_Pistol", SubResource("92"), "Player_Idle_Pistol", "Player_Reload_Pistol", SubResource("93"), "Player_Idle_Pistol", "Player_Shoot_Pistol", SubResource("94"), "Player_Reload_Pistol", "Player_Idle_Pistol", SubResource("95"), "Player_Shoot_Pistol", "Player_Idle_Pistol", SubResource("96"), "Player_Move_Pistol", "Player_Idle_Pistol", SubResource("97"), "Player_Melee_Pistol", "Player_Idle_Pistol", SubResource("98"), "Player_Move_Pistol", "Player_Shoot_Pistol", SubResource("106"), "Player_Move_Pistol", "Player_Melee_Pistol", SubResource("107"), "Player_Move_Pistol", "Player_Reload_Pistol", SubResource("108"), "Player_Shoot_Pistol", "Player_Reload_Pistol", SubResource("109"), "Player_Reload_Pistol", "Player_Shoot_Pistol", SubResource("110")]
+graph_offset = Vector2(-80.5794, -137.22)
 
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["player"]]
 collision_mask = 8
-script = ExtResource( 6 )
+script = ExtResource("6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2( 0, -28 )
-scale = Vector2( 0.5, 0.5 )
-frames = SubResource( 75 )
-animation = "Player_Idle_Pistol"
+position = Vector2(0, -28)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("75")
+animation = &"Player_Idle_Pistol"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../AnimatedSprite2D")
-anims/Player_Idle_Pistol = SubResource( 76 )
-anims/Player_Melee_Pistol = SubResource( 77 )
-anims/Player_Move_Pistol = SubResource( 78 )
-anims/Player_Reload_Pistol = SubResource( 79 )
-anims/Player_Shoot_Pistol = SubResource( 80 )
-anims/RESET = SubResource( 81 )
+libraries = {
+"": SubResource("AnimationLibrary_qpo45")
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -6, -18 )
-shape = SubResource( 1 )
+position = Vector2(-6, -18)
+shape = SubResource("1")
 
 [node name="BulletPoint" type="Node2D" parent="."]
-position = Vector2( 53, 0 )
+position = Vector2(53, 0)
 
 [node name="OutOfAmmo" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 8 )
+stream = ExtResource("8")
 volume_db = -5.0
-bus = "Effects"
+bus = &"Effects"
 
 [node name="Pistol" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 7 )
+stream = ExtResource("7")
 volume_db = -5.0
-bus = "Effects"
+bus = &"Effects"
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 104 )
+tree_root = SubResource("104")
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/playback = SubResource( 105 )
