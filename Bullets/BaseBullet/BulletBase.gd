@@ -3,13 +3,13 @@ class_name Bullet
 
 var max_range = 1250
 var speed = 1000
-var damage = 10
-
+var attack = Attack.new()
 var travelled_distance = 0
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	attack.attack_damage = 10
 	pass # Replace with function body.
 
 
@@ -33,5 +33,5 @@ func _on_body_entered(body):
 		#create instance of explosion
 		if body.is_in_group("enemy"):
 			# deals damage to enemy if of that type
-			body.take_damage(damage)
+			body.take_damage(attack)
 		queue_free()

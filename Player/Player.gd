@@ -88,9 +88,9 @@ func _player_shoot():
 	get_tree().get_root().add_child(bullet_temp)
 	
 #set_physics_process(false) when player dies so you can't move
-func take_damage(damage):
-	player_health -= damage
-	print("Player Took Damage: ", damage)
+func take_damage(attack : Attack):
+	player_health -= attack.attack_damage
+	print("Player Took Damage: ", attack.attack_damage)
 	if player_health <= 0:
 		# lock movement for death animation/explosion
 		dead = true

@@ -3,7 +3,7 @@ extends Bullet
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	damage = 20
+	attack.attack_damage = 20
 	speed = 1500
 
 
@@ -12,5 +12,5 @@ func _on_SniperBullet_body_entered(body):
 		#create instance of explosion
 		if body.is_in_group("player"):
 			# deals damage to enemy if of that type
-			body.take_damage(damage)
+			body.take_damage(attack)
 		queue_free()

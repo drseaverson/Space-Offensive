@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bsljunmtq00dx"]
+
+[ext_resource type="PackedScene" uid="uid://bj47252iyns4b" path="res://Enemies/EnemyParent/Enemy.tscn" id="1_sgdj6"]
+[ext_resource type="Texture2D" uid="uid://dknxhqn5b7uqn" path="res://Sprites/Enemies/Characters/enemySoldierBase.png" id="2_4xyxm"]
+[ext_resource type="Script" path="res://Enemies/Soldier/SoldierEnemy.gd" id="2_il5u3"]
+
+[sub_resource type="CapsuleShape2D" id="1"]
+radius = 23.0001
+height = 47.9999
+
+[node name="Enemy" instance=ExtResource("1_sgdj6")]
+script = ExtResource("2_il5u3")
+
+[node name="Sprite2D" parent="." index="0"]
+rotation = 2.47662
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("2_4xyxm")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(-11, 5)
+rotation = 1.57079
+shape = SubResource("1")
+
+[node name="BulletPoint" parent="." index="2"]
+position = Vector2(57, -2)
+
+[node name="HealthBar" parent="." index="4"]
+offset_left = -34.0
+offset_top = -41.0
+offset_right = 5.0
+offset_bottom = 0.0

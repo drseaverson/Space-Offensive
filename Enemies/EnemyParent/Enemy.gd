@@ -92,10 +92,10 @@ func shoot_weapon():
 		can_shoot = true
 
 # tracks enemy damage/health
-func take_damage(damage):
-	health -= damage
-	health_bar.on_health_updated(health, damage)
-	print(enemy_name, " Took Damage: ", damage)
+func take_damage(attack : Attack):
+	health -= attack.attack_damage
+	health_bar.on_health_updated(health, attack.attack_damage)
+	print(enemy_name, " Took Damage: ", attack.attack_damage)
 	if health <= 0:
 		# lock movement of character for death animation/explosion etc
 		print(enemy_name, " Died")
