@@ -1,16 +1,1 @@
-res://Bullets/BaseBullet/BulletBase.tscn
-res://Bullets/BaseBullet/BulletBase.gd
-res://Bullets/Player/PlayerBullet.gd
-res://Bullets/Enemy/SniperBullet.tscn
 res://Bullets/Player/PlayerBullet.tscn
-res://Bullets/Enemy/Grenade/Grenade.tscn
-res://Scenes/World.tscn
-res://Scenes/MainMenu.tscn
-res://Player/Player.gd
-res://Bullets/Enemy/Grenade/Grenade.gd
-res://Bullets/Enemy/SniperBullet.gd
-res://Walls/BlockWall.tscn
-res://Scenes/World.gd
-res://Walls/HorizontalWall.tscn
-res://Enemies/GrenadeEnemy(M)/GrenadeEnemy(M).tscn
-res://Walls/VerticalWall.tscn
