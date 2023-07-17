@@ -1,10 +1,1 @@
-res://Classes/Attack.gd
-res://Player/Player.tscn
-res://Player/Player.gd
-res://Bullets/Enemy/EnemyBullet.gd
-res://Bullets/BaseBullet/BulletBase.gd
-res://Enemies/EnemyParent/Enemy.gd
-res://Enemies/EnemyParent/Enemy.tscn
-res://Bullets/Enemy/SniperBullet.gd
 res://Enemies/Soldier/SoldierEnemy.tscn
-res://Bullets/Enemy/Grenade/Grenade.gd
