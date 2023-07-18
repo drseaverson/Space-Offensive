@@ -9,6 +9,7 @@ size = Vector2(557, 113)
 [node name="HorizontalWall" instance=ExtResource("1_isebl")]
 
 [node name="Sprite2D" parent="." index="0"]
+position = Vector2(34, 40)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1")
 

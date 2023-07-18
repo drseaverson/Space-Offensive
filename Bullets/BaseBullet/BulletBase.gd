@@ -27,11 +27,10 @@ func _physics_process(delta):
 
 
 func _on_body_entered(body):
-	if body.is_in_group("wall"):
-		print("Bullet collided with wall")
 	if !body.is_in_group("player"):
 		#create instance of explosion
-		if body.is_in_group("enemy"):
-			# deals damage to enemy if of that type
+		if body.is_in_group("enemy") or body.is_in_group("obstacle"):
+			# deals damage to enemy if of that type and gives position
+			attack.position = global_position
 			body.take_damage(attack)
 		queue_free()

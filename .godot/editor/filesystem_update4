@@ -1,1 +1,13 @@
-res://Enemies/Soldier/SoldierEnemy.tscn
+res://Obstacles/ExplosiveBarrel.tscn
+res://Scenes/World.tscn
+res://Obstacles/ExplosiveBarrel.gd
+res://Enemies/GrenadeEnemy(M)/GrenadeEnemy(M).gd
+res://Player/Player.tscn
+res://Enemies/Sniper/Sniper.tscn
+res://Enemies/GrenadeEnemy(M)/GrenadeEnemy(M).tscn
+res://Bullets/BaseBullet/BulletBase.tscn
+res://Bullets/BaseBullet/BulletBase.gd
+res://Classes/Attack.gd
+res://Bullets/Player/PlayerBullet.tscn
+res://Walls/HorizontalWall.tscn
+res://StaticBody2D.gd
