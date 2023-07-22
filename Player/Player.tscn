@@ -726,8 +726,8 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape2D" id="1"]
-radius = 38.0
-height = 76.0
+radius = 37.0
+height = 74.0
 
 [sub_resource type="AnimationNodeAnimation" id="82"]
 animation = &"Player_Idle_Pistol"
@@ -806,7 +806,7 @@ libraries = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
-position = Vector2(-6, -18)
+position = Vector2(-8, -22)
 shape = SubResource("1")
 
 [node name="BulletPoint" type="Node2D" parent="."]

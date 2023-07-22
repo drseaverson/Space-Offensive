@@ -4,6 +4,8 @@ var explosion_timer = 5
 var health = 40
 var attack = Attack.new()
 
+var animated_flame = preload("res://Obstacles/Explosive Barrel/Animated Flame.tscn")
+
 func _ready():
 	attack.attack_damage = 75
 	attack.knockback_force = 50

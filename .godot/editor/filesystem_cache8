@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1689859934
+::res://::1689985238
 default_bus_layout.tres::AudioBusLayout::-1::1689174090::0::1::::<><>::
 default_env.tres::Environment::-1::1689174090::0::1::::<><>::
 icon.png::CompressedTexture2D::5092633545678802375::1689174090::1689174090::1::::<><>::
@@ -15,30 +15,30 @@ BulletBase.tscn::PackedScene::2711721540377120339::1689859796::0::1::::<><>::res
 EnemyBullet.gd::GDScript::-1::1689859796::0::1::::<>Bullet<>::
 EnemyBullet.tscn::PackedScene::-1::1689174090::0::1::::<><>::res://Sprites/Enemies/Bullets/enemy_bullet_base.png<>res://Bullets/BaseBullet/BulletBase.tscn<>res://Bullets/Enemy/EnemyBullet.gd
 SniperBullet.gd::GDScript::-1::1689859796::0::1::::<>Bullet<>::
-SniperBullet.tscn::PackedScene::5993820338115294584::1689859796::0::1::::<><>::res://Bullets/Enemy/SniperBullet.gd<>uid://bevtwmfvhlih4::::res://Bullets/BaseBullet/BulletBase.tscn<>uid://bqqxyj430r0mq::::res://Sprites/Enemies/Bullets/sniper_bullet.png
+SniperBullet.tscn::PackedScene::5993820338115294584::1689859796::0::1::::<><>::res://Bullets/Enemy/SniperBullet.gd<>uid://bevtwmfvhlih4
 ::res://Bullets/Enemy/Grenade/::1689859796
 Grenade.gd::GDScript::-1::1689859796::0::1::::<>Bullet<>::
-Grenade.tscn::PackedScene::5855961212682214844::1689859796::0::1::::<><>::uid://bevtwmfvhlih4::::res://Bullets/BaseBullet/BulletBase.tscn<>uid://blblcl20wjd1m::::res://Sprites/Enemies/Bullets/enemy_grenade.png<>res://Bullets/Enemy/Grenade/Grenade.gd
+Grenade.tscn::PackedScene::5855961212682214844::1689859796::0::1::::<><>::uid://bevtwmfvhlih4
 GrenadeExplosion.gd::GDScript::-1::1689174090::0::1::::<>CharacterBody2D<>::
 GrenadeExplosion.tscn::PackedScene::-1::1689174090::0::1::::<><>::res://Sprites/Enemies/Effects/grenade_explosion (change color).png<>res://Bullets/Enemy/Grenade/GrenadeExplosion.gd
 ::res://Bullets/Gun Flares/::1689859796
 GrenadeFlare.tscn::PackedScene::-1::1689174090::0::1::::<><>::res://Sprites/Enemies/Effects/grenade_launcher.png<>res://Bullets/Gun Flares/GunFlareBase.tscn
 GunFlareBase.gd::GDScript::-1::1689174090::0::1::::FlareParent<>CharacterBody2D<>::
 GunFlareBase.tscn::PackedScene::-1::1689174090::0::1::::<><>::res://Bullets/Gun Flares/GunFlareBase.gd
-PlayerGunFlare.tscn::PackedScene::8128074288090905217::1689859796::0::1::::<><>::uid://dptlu23rwf6uh::::res://Sprites/Player/player_gun_flare.png<>res://Bullets/Gun Flares/GunFlareBase.tscn
+PlayerGunFlare.tscn::PackedScene::8128074288090905217::1689859796::0::1::::<><>::uid://dptlu23rwf6uh
 ShotgunFlare.tscn::PackedScene::-1::1689174090::0::1::::<><>::res://Sprites/Enemies/Effects/enemy_shotgun_flare.png<>res://Bullets/Gun Flares/GunFlareBase.tscn
 ::res://Bullets/Player/::1689859796
 PlayerBullet.gd::GDScript::-1::1689859796::0::1::::<>Bullet<>::
-PlayerBullet.tscn::PackedScene::2204368205841155331::1689859796::0::1::::<><>::res://Bullets/Player/PlayerBullet.gd<>uid://bevtwmfvhlih4::::res://Bullets/BaseBullet/BulletBase.tscn<>uid://wqlrv0o076u0::::res://Sprites/Player/player_bullets.png
+PlayerBullet.tscn::PackedScene::2204368205841155331::1689859796::0::1::::<><>::res://Bullets/Player/PlayerBullet.gd<>uid://bevtwmfvhlih4
 ::res://Classes/::1689859796
 Attack.gd::GDScript::-1::1689859796::0::1::::Attack<>RefCounted<>::
 ::res://Enemies/::1689859796
 ::res://Enemies/EnemyParent/::1689859796
 Enemy.gd::GDScript::-1::1689859796::0::1::::EnemyParent<>CharacterBody2D<>::
-Enemy.tscn::PackedScene::3079980009313396811::1689859765::0::1::::<><>::res://Enemies/EnemyParent/Enemy.gd<>uid://bb833ye6h44du::::res://Player/HealthBar/HealthBar.tscn
+Enemy.tscn::PackedScene::3079980009313396811::1689859765::0::1::::<><>::res://Enemies/EnemyParent/Enemy.gd<>uid://bb833ye6h44du
 ::res://Enemies/GrenadeEnemy(M)/::1689859796
 GrenadeEnemy(M).gd::GDScript::-1::1689174090::0::1::::<>EnemyParent<>::
-GrenadeEnemy(M).tscn::PackedScene::2240391291607713229::1689859796::0::1::::<><>::uid://bj47252iyns4b::::res://Enemies/EnemyParent/Enemy.tscn<>uid://b3p2x6kplxb1::::res://Sprites/Enemies/Characters/enemyMajor_grande.png<>res://Enemies/GrenadeEnemy(M)/GrenadeEnemy(M).gd
+GrenadeEnemy(M).tscn::PackedScene::2240391291607713229::1689859796::0::1::::<><>::uid://bj47252iyns4b
 ::res://Enemies/Heavy/::1689174090
 Heavy.gd::GDScript::-1::1689174090::0::1::::<>EnemyParent<>::
 Heavy.tscn::PackedScene::-1::1689174090::0::1::::<><>::res://Enemies/EnemyParent/Enemy.tscn<>res://Enemies/Heavy/Heavy.gd<>res://Sprites/Enemies/Characters/enemySoldierMinigun.png
@@ -47,29 +47,32 @@ HeavyShotgun.gd::GDScript::-1::1689174090::0::1::::<>EnemyParent<>::
 HeavyShotgun.tscn::PackedScene::-1::1689174090::0::1::::<><>::res://Enemies/EnemyParent/Enemy.tscn<>res://Sprites/Enemies/Characters/enemySoldierShotgun.png<>res://Enemies/HeavyShotgun/HeavyShotgun.gd
 ::res://Enemies/Sniper/::1689859765
 Sniper.gd::GDScript::-1::1689174090::0::1::::<>EnemyParent<>::
-Sniper.tscn::PackedScene::6835360481084134919::1689859765::0::1::::<><>::uid://bj47252iyns4b::::res://Enemies/EnemyParent/Enemy.tscn<>uid://d3swqqodtouce::::res://Sprites/Enemies/Characters/enemySoldierSniper.png<>res://Enemies/Sniper/Sniper.gd
+Sniper.tscn::PackedScene::6835360481084134919::1689859765::0::1::::<><>::uid://bj47252iyns4b
 ::res://Enemies/Soldier/::1689859796
 SoldierEnemy.gd::GDScript::-1::1689859796::0::1::::<>EnemyParent<>::
-SoldierEnemy.tscn::PackedScene::3673110895512208521::1689859796::0::1::::<><>::uid://bj47252iyns4b::::res://Enemies/EnemyParent/Enemy.tscn<>uid://dknxhqn5b7uqn::::res://Sprites/Enemies/Characters/enemySoldierBase.png<>res://Enemies/Soldier/SoldierEnemy.gd
+SoldierEnemy.tscn::PackedScene::3673110895512208521::1689859796::0::1::::<><>::uid://bj47252iyns4b
 ::res://Fonts/::1689174090
 AcerSupplement-wOpZ.ttf::FontFile::6294223362830904287::1689174090::1689174090::1::::<><>::
 ChasingRabbits-ByRn.ttf::FontFile::2285388026995546365::1689174090::1689174090::1::::<><>::
-::res://Obstacles/::1689859796
-ExplosiveBarrel.gd::GDScript::-1::1689859796::0::1::::<>StaticBody2D<>::
-ExplosiveBarrel.tscn::PackedScene::3853353361215350162::1689859796::0::1::::<><>::res://Obstacles/ExplosiveBarrel.gd<>uid://ctf2o0bah0y10::::res://Sprites/Obstacles/explosive_barrel.PNG
-::res://Player/::1689859796
+::res://Obstacles/::1689983291
+::res://Obstacles/Explosive Barrel/::1689985224
+Animated Flame.gd::GDScript::-1::1689985214::0::1::::<>Sprite2D<>::
+Animated Flame.tscn::PackedScene::7621706446953596187::1689985224::0::1::::<><>::uid://cxyn1jwqpnsux::::res://Sprites/Obstacles/fire_02.png<>res://Obstacles/Explosive Barrel/Animated Flame.gd
+ExplosiveBarrel.gd::GDScript::-1::1689984319::0::1::::<>StaticBody2D<>::
+ExplosiveBarrel.tscn::PackedScene::638276907080519190::1689985130::0::1::::<><>::res://Obstacles/Explosive Barrel/ExplosiveBarrel.gd<>uid://ctf2o0bah0y10::::res://Sprites/Obstacles/explosive_barrel.PNG
+::res://Player/::1689985130
 Player.gd::GDScript::-1::1689859796::0::1::::<>CharacterBody2D<>::
-Player.tscn::PackedScene::3013117652048555923::1689859796::0::1::::<><>::uid://dlu2tp2xfisvn::::res://Sprites/Player/Pistol/Player_Move_Pistol.png<>uid://idyensmd0p7i::::res://Sprites/Player/Pistol/Player_Melee_Pistol.png<>uid://ca63a6anugjpi::::res://Sprites/Player/Pistol/Player_Shoot_Pistol.png<>uid://cd3nhop4ojg3b::::res://Sprites/Player/Pistol/Player_Reload_Pistol.png<>uid://ceetyrbvhdga3::::res://Sprites/Player/Pistol/Player_Idle_Pistol.png<>res://Player/Player.gd<>uid://26k0swdrk205::::res://Sounds/Effects/pistol.ogg<>uid://cn5bm58c0vb32::::res://Sounds/Effects/outofammo.ogg
+Player.tscn::PackedScene::3013117652048555923::1689985130::0::1::::<><>::uid://dlu2tp2xfisvn::::res://Sprites/Player/Pistol/Player_Move_Pistol.png<>uid://idyensmd0p7i::::res://Sprites/Player/Pistol/Player_Melee_Pistol.png<>uid://ca63a6anugjpi::::res://Sprites/Player/Pistol/Player_Shoot_Pistol.png<>uid://cd3nhop4ojg3b::::res://Sprites/Player/Pistol/Player_Reload_Pistol.png<>uid://ceetyrbvhdga3::::res://Sprites/Player/Pistol/Player_Idle_Pistol.png<>res://Player/Player.gd<>uid://26k0swdrk205::::res://Sounds/Effects/pistol.ogg<>uid://cn5bm58c0vb32::::res://Sounds/Effects/outofammo.ogg
 ::res://Player/HealthBar/::1689859765
 HealthBar.gd::GDScript::-1::1689174090::0::1::::<>Control<>::
-HealthBar.tscn::PackedScene::2526485339400551206::1689859765::0::1::::<><>::uid://cioyqehx5bauv::::res://Sprites/Health/Heal_0_Offset.png<>uid://be8hfmx3oks2e::::res://Sprites/Health/Heal_0_Highlight.png<>res://Player/HealthBar/HealthBar.gd
-::res://Scenes/::1689859796
+HealthBar.tscn::PackedScene::2526485339400551206::1689859765::0::1::::<><>::uid://cioyqehx5bauv
+::res://Scenes/::1689985130
 MainMenu.gd::GDScript::-1::1689174090::0::1::::<>Control<>::
 MainMenu.tscn::PackedScene::2931682394384323891::1689859765::0::1::::<><>::res://Scenes/MainMenu.gd
 Options.gd::GDScript::-1::1689174090::0::1::::<>Control<>::
 Options.tscn::PackedScene::-1::1689174090::0::1::::<><>::res://Scenes/Options.gd<>res://Fonts/AcerSupplement-wOpZ.ttf
 World.gd::GDScript::-1::1689859796::0::1::::<>Node2D<>::
-World.tscn::PackedScene::5180298955231902023::1689859796::0::1::::<><>::uid://c63m77jkarsc2::::res://Walls/BlockWall.tscn<>uid://bi6tuwjp2dhtj::::res://Player/Player.tscn<>uid://kfix2r2rk7o8::::res://Sprites/Background/Backround_Empty.png<>res://Scenes/World.gd<>uid://cub7ujm5j8ssi::::res://Walls/HorizontalWall.tscn<>uid://c4ndnhchqq5x8::::res://Enemies/Sniper/Sniper.tscn<>uid://66i6glq40rqr::::res://Enemies/GrenadeEnemy(M)/GrenadeEnemy(M).tscn<>uid://bu5ufw57cnblq::::res://Obstacles/ExplosiveBarrel.tscn
+World.tscn::PackedScene::5180298955231902023::1689985130::0::1::::<><>::uid://c63m77jkarsc2::::res://Walls/BlockWall.tscn<>uid://bi6tuwjp2dhtj::::res://Player/Player.tscn<>uid://kfix2r2rk7o8::::res://Sprites/Background/Backround_Empty.png<>res://Scenes/World.gd<>uid://cub7ujm5j8ssi::::res://Walls/HorizontalWall.tscn<>uid://c4ndnhchqq5x8::::res://Enemies/Sniper/Sniper.tscn<>uid://66i6glq40rqr::::res://Enemies/GrenadeEnemy(M)/GrenadeEnemy(M).tscn
 ::res://Sounds/::1689174090
 ::res://Sounds/Effects/::1689174090
 outofammo.ogg::AudioStreamOggVorbis::5747311440626198415::1689174090::1689174090::1::::<><>::
@@ -123,8 +126,8 @@ Player_Move_Pistol.png::CompressedTexture2D::7974301005679746255::1689174090::16
 Player_Reload_Pistol.png::CompressedTexture2D::5042013056712937177::1689174090::1689174090::1::::<><>::
 Player_Shoot_Pistol.png::CompressedTexture2D::4838538782401004602::1689174090::1689174090::1::::<><>::
 ::res://Walls/::1689859797
-BlockWall.tscn::PackedScene::7007285541702521647::1689859797::0::1::::<><>::uid://bocbplyanytc7::::res://Sprites/Background/Walls/Block_Wall.png<>uid://cfbxyreikadh8::::res://Walls/BuildingParent.tscn
+BlockWall.tscn::PackedScene::7007285541702521647::1689859797::0::1::::<><>::uid://bocbplyanytc7
 BuildingParent.gd::GDScript::-1::1689859797::0::1::::Building<>Node2D<>::
 BuildingParent.tscn::PackedScene::5127290212670790587::1689859797::0::1::::<><>::res://Walls/BuildingParent.gd
-HorizontalWall.tscn::PackedScene::6180661770171746828::1689859797::0::1::::<><>::uid://gtgae2d7ywwd::::res://Sprites/Background/Walls/Horizontal_Wall.png<>uid://cfbxyreikadh8::::res://Walls/BuildingParent.tscn
-VerticalWall.tscn::PackedScene::190892739336426721::1689859797::0::1::::<><>::uid://bu6i446f0wjnc::::res://Sprites/Background/Walls/Vertical_Wall.png<>uid://cfbxyreikadh8::::res://Walls/BuildingParent.tscn
+HorizontalWall.tscn::PackedScene::6180661770171746828::1689859797::0::1::::<><>::uid://gtgae2d7ywwd
+VerticalWall.tscn::PackedScene::190892739336426721::1689859797::0::1::::<><>::uid://bu6i446f0wjnc
