@@ -13,6 +13,7 @@ func _ready():
 # checks for barrel takes damage
 func take_damage(attack : Attack):
 		#spawn flame at point of bullet
+		#spawn_flame()
 		health -= attack.attack_damage
 		print("Barrel Took Damage : ", attack.attack_damage)
 		if health <= 0:
@@ -23,4 +24,8 @@ func barrel_explosion():
 	# spawn epxlosion animation, call damage to player/enemies in range
 	# possible knockback force applied
 	queue_free()
+	pass
+	
+func spawn_flame():
+	# spawn flame at attack location and reverse direction
 	pass

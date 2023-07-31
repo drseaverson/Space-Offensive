@@ -1,2 +1,4 @@
-res://Obstacles/Explosive Barrel/Animated Flame.tscn
 res://Scenes/World.tscn
+res://Obstacles/Explosive Barrel/Animated Flame.tscn
+res://Obstacles/Explosive Barrel/ExplosiveBarrel.tscn
+res://Obstacles/Explosive Barrel/ExplosiveBarrel.gd
