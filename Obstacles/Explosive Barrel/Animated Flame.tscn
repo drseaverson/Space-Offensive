@@ -51,6 +51,7 @@ vframes = 8
 script = ExtResource("2_3e5fj")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+reset_on_save = false
 libraries = {
 "": SubResource("AnimationLibrary_cdl83")
 }

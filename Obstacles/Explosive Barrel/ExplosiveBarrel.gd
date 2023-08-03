@@ -21,11 +21,16 @@ func take_damage(attack : Attack):
 			print("Barrel explosion")
 
 func barrel_explosion():
-	# spawn epxlosion animation, call damage to player/enemies in range
+	# spawn explosion animation, call damage to player/enemies in range
 	# possible knockback force applied
 	queue_free()
 	pass
 	
 func spawn_flame():
-	# spawn flame at attack location and reverse direction
+	# spawns flame at attack location
+	var flame_temp = animated_flame.instantiate()
+	flame_temp.position = attack.attack_position
+	# reverses directino of attack to make flame face away from barrel
+	flame_temp.rotation = 360 - attack.attack_rotation
+	get_tree().get_root().add_child(flame_temp)
 	pass
