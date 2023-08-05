@@ -1,6 +1,2 @@
-res://Obstacles/Explosive Barrel/Animated Flame.tscn
-res://Obstacles/Explosive Barrel/ExplosiveBarrel.tscn
-res://Obstacles/Explosive Barrel/ExplosiveBarrel.gd
-res://Classes/Attack.gd
-res://Player/Player.tscn
-res://Obstacles/Explosive Barrel/Animated Flame.gd
+res://Bullets/BaseBullet/BulletBase.tscn
+res://Bullets/BaseBullet/BulletBase.gd

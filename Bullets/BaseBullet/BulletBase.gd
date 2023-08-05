@@ -32,5 +32,6 @@ func _on_body_entered(body):
 		if body.is_in_group("enemy") or body.is_in_group("obstacle"):
 			# deals damage to enemy if of that type and gives position
 			attack.position = global_position
+			attack.attack_rotation = rotation_degrees
 			body.take_damage(attack)
 		queue_free()
