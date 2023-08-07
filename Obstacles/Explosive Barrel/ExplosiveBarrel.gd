@@ -11,11 +11,11 @@ func _ready():
 	attack.knockback_force = 50
 
 # checks for barrel takes damage
-func take_damage(attack : Attack):
+func take_damage(damage : Attack):
 		#spawn flame at point of bullet
-		#spawn_flame()
-		health -= attack.attack_damage
-		print("Barrel Took Damage : ", attack.attack_damage)
+		#spawn_flame(damage)
+		health -= damage.attack_damage
+		print("Barrel Took Damage : ", damage.attack_damage)
 		if health <= 0:
 			barrel_explosion()
 			print("Barrel explosion")
@@ -24,13 +24,11 @@ func barrel_explosion():
 	# spawn explosion animation, call damage to player/enemies in range
 	# possible knockback force applied
 	queue_free()
-	pass
 	
-func spawn_flame():
+func spawn_flame(damage : Attack):
 	# spawns flame at attack location
 	var flame_temp = animated_flame.instantiate()
-	flame_temp.position = attack.attack_position
-	# reverses directino of attack to make flame face away from barrel
-	flame_temp.rotation = 360 - attack.attack_rotation
+	flame_temp.position = damage.attack_position
+	# reverses direction of attack to make flame face away from barrel
+	flame_temp.rotation_degrees = (180 - abs(damage.attack_rotation)) - 90
 	get_tree().get_root().add_child(flame_temp)
-	pass

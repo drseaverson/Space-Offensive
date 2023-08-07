@@ -1,2 +1,9 @@
+res://Obstacles/Explosive Barrel/Animated Flame.tscn
+res://Obstacles/Explosive Barrel/Animated Flame.gd
+res://Obstacles/Explosive Barrel/ExplosiveBarrel.tscn
+res://Obstacles/Explosive Barrel/ExplosiveBarrel.gd
+res://Player/Player.tscn
+res://Player/Player.gd
 res://Bullets/BaseBullet/BulletBase.tscn
 res://Bullets/BaseBullet/BulletBase.gd
+res://Scenes/World.tscn
