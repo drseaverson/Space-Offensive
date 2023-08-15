@@ -1,7 +1,7 @@
-res://Obstacles/Explosive Barrel/Barrel_Explosion.tscn
 res://Obstacles/Explosive Barrel/ExplosiveBarrel.tscn
 res://Player/Player.tscn
 res://Bullets/BaseBullet/BulletBase.tscn
 res://Scenes/World.tscn
 res://Obstacles/Explosive Barrel/Animated Flame.tscn
-res://Obstacles/Explosive Barrel/Barrel_Explosion.gd
+res://Obstacles/Explosive Barrel/Barrel_Explosion.tscn
+res://Player/Player.gd

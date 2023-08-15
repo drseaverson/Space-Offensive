@@ -89,6 +89,10 @@ func _player_shoot():
 	
 #set_physics_process(false) when player dies so you can't move
 func take_damage(attack : Attack):
+	if (attack.attack_damage >= 50):
+		$TakeDamage2.play()
+	else:
+		$TakeDamage1.play()
 	player_health -= attack.attack_damage
 	print("Player Took Damage: ", attack.attack_damage)
 	if player_health <= 0:
