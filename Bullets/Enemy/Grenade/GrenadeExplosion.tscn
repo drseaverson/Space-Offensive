@@ -1,21 +1,25 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=3 uid="uid://bm6fhwnjuxaqm"]
 
-[ext_resource path="res://Sprites/Enemies/Effects/grenade_explosion (change color).png" type="Texture2D" id=1]
-[ext_resource path="res://Bullets/Enemy/Grenade/GrenadeExplosion.gd" type="Script" id=2]
+[ext_resource type="Texture2D" uid="uid://pn4sjh3bdsxc" path="res://Sprites/Enemies/Effects/grenade_explosion (change color).png" id="1"]
+[ext_resource type="Script" path="res://Bullets/Enemy/Grenade/GrenadeExplosion.gd" id="2"]
+[ext_resource type="AudioStream" uid="uid://cx68i5blije4f" path="res://Sounds/Effects/enemy_grenade_explosion.wav" id="3_nq66w"]
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="CircleShape2D" id="1"]
 radius = 39.0128
 
 [node name="GrenadeExplosion" type="CharacterBody2D"]
-script = ExtResource( 2 )
+script = ExtResource("2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 1 )
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource( 1 )
+shape = SubResource("1")
+
+[node name="Explosion" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_nq66w")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
