@@ -6,6 +6,7 @@ var attack = Attack.new()
 var blink = false
 
 var animated_flame = preload("res://Obstacles/Explosive Barrel/Animated Flame.tscn")
+var animated_explosion = preload("res://Obstacles/Explosive Barrel/Barrel_Explosion.tscn")
 
 func _ready():
 	attack.attack_damage = 50
@@ -25,6 +26,10 @@ func take_damage(damage : Attack):
 		print("Barrel explosion")
 
 func barrel_explosion():
+	# spawns explosion animation
+	var explosion_temp = animated_explosion.instantiate()
+	explosion_temp.position = position
+	get_tree().get_root().add_child(explosion_temp)
 	$Explosion.play()
 	# makes sprite invisible and unable to collide while sound plays
 	$Sprite2D.visible = false

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwlssnw57u56h"
-path="res://.godot/imported/explosion_sheet.png-8547fceac93478bbe9161bcb278e38a6.ctex"
+uid="uid://s2xpbeedw0dy"
+path="res://.godot/imported/explosion_sprite_sheet.png-2d62a58e9aad78adef636a4e6d923bda.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Effects/explosion_sheet.png"
-dest_files=["res://.godot/imported/explosion_sheet.png-8547fceac93478bbe9161bcb278e38a6.ctex"]
+source_file="res://Sprites/Effects/Barrel Explosion/explosion_sprite_sheet.png"
+dest_files=["res://.godot/imported/explosion_sprite_sheet.png-2d62a58e9aad78adef636a4e6d923bda.ctex"]
 
 [params]
 

@@ -8,7 +8,7 @@
 radius = 30.0167
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4f7s0"]
-radius = 141.057
+radius = 117.0
 
 [node name="ExplosiveBarrel" type="StaticBody2D" groups=["obstacle"]]
 collision_layer = 8

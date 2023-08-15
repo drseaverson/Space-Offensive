@@ -56,6 +56,9 @@ position = Vector2(194, 168)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(30, 30)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+rotation_smoothing_speed = 10.0
 
 [node name="Walls" type="Node2D" parent="."]
 

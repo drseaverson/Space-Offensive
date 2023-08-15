@@ -786,7 +786,7 @@ states/Player_Reload_Pistol/position = Vector2(324.47, 103.36)
 states/Player_Shoot_Pistol/node = SubResource("86")
 states/Player_Shoot_Pistol/position = Vector2(960.47, 103.36)
 transitions = ["Player_Idle_Pistol", "Player_Melee_Pistol", SubResource("91"), "Player_Idle_Pistol", "Player_Move_Pistol", SubResource("92"), "Player_Idle_Pistol", "Player_Reload_Pistol", SubResource("93"), "Player_Idle_Pistol", "Player_Shoot_Pistol", SubResource("94"), "Player_Reload_Pistol", "Player_Idle_Pistol", SubResource("95"), "Player_Shoot_Pistol", "Player_Idle_Pistol", SubResource("96"), "Player_Move_Pistol", "Player_Idle_Pistol", SubResource("97"), "Player_Melee_Pistol", "Player_Idle_Pistol", SubResource("98"), "Player_Move_Pistol", "Player_Shoot_Pistol", SubResource("106"), "Player_Move_Pistol", "Player_Melee_Pistol", SubResource("107"), "Player_Move_Pistol", "Player_Reload_Pistol", SubResource("108"), "Player_Shoot_Pistol", "Player_Reload_Pistol", SubResource("109"), "Player_Reload_Pistol", "Player_Shoot_Pistol", SubResource("110")]
-graph_offset = Vector2(-80.5794, -137.22)
+graph_offset = Vector2(-80.5794, 10.5268)
 
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["player"]]
 collision_mask = 8
