@@ -90,6 +90,9 @@ func _player_shoot():
 #set_physics_process(false) when player dies so you can't move
 func take_damage(attack : Attack):
 	if (attack.attack_damage >= 50):
+		print("Knockback Force Applied: ", attack.knockback_force)
+		set_velocity((global_position - attack.attack_position).normalized() * attack.knockback_force)
+		move_and_slide()
 		$TakeDamage2.play()
 	else:
 		$TakeDamage1.play()

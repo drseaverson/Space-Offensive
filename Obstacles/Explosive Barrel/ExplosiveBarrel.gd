@@ -10,7 +10,8 @@ var animated_explosion = preload("res://Obstacles/Explosive Barrel/Barrel_Explos
 
 func _ready():
 	attack.attack_damage = 50
-	attack.knockback_force = 50
+	attack.knockback_force = 1500
+	attack.attack_position = global_position
 
 # checks for barrel takes damage
 func take_damage(damage : Attack):

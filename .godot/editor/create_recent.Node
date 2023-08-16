@@ -1,8 +1,8 @@
+Timer
 AudioStreamPlayer2D
 AnimationPlayer
 Sprite2D
 AnimatedSprite2D
-Timer
 CollisionShape2D
 Area2D
 StaticBody2D

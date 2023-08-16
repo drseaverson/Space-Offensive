@@ -828,5 +828,7 @@ anim_player = NodePath("../AnimationPlayer")
 active = true
 
 [node name="TakeDamage1" type="AudioStreamPlayer2D" parent="."]
+volume_db = 2.0
 
 [node name="TakeDamage2" type="AudioStreamPlayer2D" parent="."]
+volume_db = 2.0
