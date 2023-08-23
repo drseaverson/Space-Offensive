@@ -80,5 +80,8 @@ position = Vector2(742, 536)
 position = Vector2(467, 327)
 scale = Vector2(0.938, 1)
 
+[node name="ExplosiveBarrel2" parent="." instance=ExtResource("8_bwv28")]
+position = Vector2(354, 550)
+
 [node name="ExplosiveBarrel" parent="." instance=ExtResource("8_bwv28")]
 position = Vector2(155, 384)
