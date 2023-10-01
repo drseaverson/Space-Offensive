@@ -1,6 +1,1 @@
-res://Scenes/World.tscn
-res://Obstacles/Explosive Barrel/ExplosiveBarrel.tscn
-res://Player/Player.tscn
-res://Bullets/BaseBullet/BulletBase.tscn
-res://Bullets/Enemy/Grenade/Grenade.tscn
 res://Obstacles/Explosive Barrel/Barrel_Explosion.tscn
