@@ -1,1 +1,3 @@
-res://Obstacles/Explosive Barrel/Barrel_Explosion.tscn
+res://Obstacles/Pickups/PickupBase.tscn
+res://Obstacles/Pickups/PickupBase.gd
+res://Bullets/BaseBullet/BulletBase.tscn
