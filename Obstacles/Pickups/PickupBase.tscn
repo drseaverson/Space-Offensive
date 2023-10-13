@@ -1,10 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://6vl6bjy03myo"]
-
-[ext_resource type="Script" path="res://Obstacles/Pickups/PickupBase.gd" id="1_2g87y"]
+[gd_scene format=3 uid="uid://6vl6bjy03myo"]
 
 [node name="PickupBase" type="Area2D"]
 collision_layer = 16
-script = ExtResource("1_2g87y")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 

@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1697215049
+::res://::1697222909
 default_bus_layout.tres::AudioBusLayout::-1::1674500571::0::1::::<><>::
 default_env.tres::Environment::-1::1674500571::0::1::::<><>::
 icon.png::CompressedTexture2D::5092633545678802375::1663785911::1689028234::1::::<><>::
@@ -8,9 +8,9 @@ README.md::TextFile::-1::1669057120::0::1::::<><>::
 MusicController.gd::GDScript::-1::1674500572::0::1::::<>Node<>::
 MusicController.tscn::PackedScene::-1::1674500572::0::1::::<><>::res://AutoLoads/MusicController.gd
 ::res://Bullets/::1670870995
-::res://Bullets/BaseBullet/::1692748932
+::res://Bullets/BaseBullet/::1697215474
 BulletBase.gd::GDScript::-1::1691454446::0::1::::Bullet<>Area2D<>::
-BulletBase.tscn::PackedScene::2711721540377120339::1692748932::0::1::::<><>::res://Bullets/BaseBullet/BulletBase.gd
+BulletBase.tscn::PackedScene::2711721540377120339::1697215474::0::1::::<><>::res://Bullets/BaseBullet/BulletBase.gd
 ::res://Bullets/Enemy/::1689549993
 EnemyBullet.gd::GDScript::-1::1689549703::0::1::::<>Bullet<>::
 EnemyBullet.tscn::PackedScene::-1::1674500572::0::1::::<><>::res://Sprites/Enemies/Bullets/enemy_bullet_base.png<>res://Bullets/BaseBullet/BulletBase.tscn<>res://Bullets/Enemy/EnemyBullet.gd
@@ -62,8 +62,9 @@ Barrel_Explosion.gd::GDScript::-1::1692122181::0::1::::<>Sprite2D<>::
 Barrel_Explosion.tscn::PackedScene::7208072599582519348::1696191371::0::1::::<><>::uid://s2xpbeedw0dy
 ExplosiveBarrel.gd::GDScript::-1::1692144903::0::1::::<>StaticBody2D<>::
 ExplosiveBarrel.tscn::PackedScene::638276907080519190::1692748932::0::1::::<><>::res://Obstacles/Explosive Barrel/ExplosiveBarrel.gd<>uid://ctf2o0bah0y10
-::res://Obstacles/Pickups/::1696196385
-PickupBase.tscn::PackedScene::2219929399697305758::1696196385::0::1::::<><>::
+::res://Obstacles/Pickups/::1697216180
+PickupBase.gd::GDScript::-1::1697216136::0::1::::Pickup<>Area2D<>::
+PickupBase.tscn::PackedScene::2219929399697305758::1697216180::0::1::::<><>::res://Obstacles/Pickups/PickupBase.gd
 ::res://Player/::1692749000
 Player.gd::GDScript::-1::1692144903::0::1::::<>CharacterBody2D<>::
 Player.tscn::PackedScene::3013117652048555923::1692749000::0::1::::<><>::uid://dlu2tp2xfisvn

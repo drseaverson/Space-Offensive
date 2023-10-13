@@ -1,3 +1,7 @@
 res://Obstacles/Pickups/PickupBase.tscn
-res://Obstacles/Pickups/PickupBase.gd
-res://Bullets/BaseBullet/BulletBase.tscn
+res://Obstacles/Pickups/HealthPickup.tscn
+res://Obstacles/Pickups/HealthPickup.gd
+res://Player/Player.tscn
+res://Player/Player.gd
+res://Obstacles/Pickups/ShieldPickup.tscn
+res://Obstacles/Pickups/ShieldPickup.gd

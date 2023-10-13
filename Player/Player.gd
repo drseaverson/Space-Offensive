@@ -1,11 +1,17 @@
 extends CharacterBody2D
 
+#create function for picking up weapons to change animation trees (create alike names of animations for each tree to smoothly transfer
+#implement functions to handle damage bonuses etc from pickups
+
 #player value handlers
 @export var move_speed = 250
 @export var fire_rate = 0.20
 var gun_flare_rate = 0.05
 var reload_rate = 1.25
 @export var player_health = 100
+@export var max_health = 100
+@export var shield_health = 50
+@export var max_shield = 100
 @export var pistol_mag_size = 12
 var state_machine
 var direction = Vector2.ZERO
@@ -101,4 +107,18 @@ func take_damage(attack : Attack):
 	if player_health <= 0:
 		# lock movement for death animation/explosion
 		dead = true
-#create function for picking up weapons to change animation trees (create alike names of animations for each tree to smoothly transfer
+
+#adds health/shield based on type given
+func _add_health(health_amount, type):
+	if (type == "health"):
+		player_health += health_amount
+		print("Player Gained " + health_amount + " health")
+		if (player_health > max_health):
+			player_health = max_health
+	elif (type == "shield"):
+		shield_health += health_amount
+		print("Player Gained " + health_amount + " shield")
+		if (shield_health > max_shield):
+			shield_health = max_shield
+	#play health gain sound/animation
+
