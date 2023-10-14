@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1697222909
+::res://::1697289470
 default_bus_layout.tres::AudioBusLayout::-1::1674500571::0::1::::<><>::
 default_env.tres::Environment::-1::1674500571::0::1::::<><>::
 icon.png::CompressedTexture2D::5092633545678802375::1663785911::1689028234::1::::<><>::
@@ -62,12 +62,16 @@ Barrel_Explosion.gd::GDScript::-1::1692122181::0::1::::<>Sprite2D<>::
 Barrel_Explosion.tscn::PackedScene::7208072599582519348::1696191371::0::1::::<><>::uid://s2xpbeedw0dy
 ExplosiveBarrel.gd::GDScript::-1::1692144903::0::1::::<>StaticBody2D<>::
 ExplosiveBarrel.tscn::PackedScene::638276907080519190::1692748932::0::1::::<><>::res://Obstacles/Explosive Barrel/ExplosiveBarrel.gd<>uid://ctf2o0bah0y10
-::res://Obstacles/Pickups/::1697216180
+::res://Obstacles/Pickups/::1697224292
+HealthPickup.gd::GDScript::-1::1697224018::0::1::::<>Pickup<>::
+HealthPickup.tscn::PackedScene::4030656733563694544::1697224018::0::1::::<><>::uid://6vl6bjy03myo::::res://Obstacles/Pickups/PickupBase.tscn<>res://Obstacles/Pickups/HealthPickup.gd<>uid://b1sn04kfljb13::::res://Sprites/Obstacles/Pickups/pickup_health.png
 PickupBase.gd::GDScript::-1::1697216136::0::1::::Pickup<>Area2D<>::
-PickupBase.tscn::PackedScene::2219929399697305758::1697216180::0::1::::<><>::res://Obstacles/Pickups/PickupBase.gd
-::res://Player/::1692749000
-Player.gd::GDScript::-1::1692144903::0::1::::<>CharacterBody2D<>::
-Player.tscn::PackedScene::3013117652048555923::1692749000::0::1::::<><>::uid://dlu2tp2xfisvn
+PickupBase.tscn::PackedScene::2219929399697305758::1697223097::0::1::::<><>::
+ShieldPickup.gd::GDScript::-1::1697224253::0::1::::<>Pickup<>::
+ShieldPickup.tscn::PackedScene::6057208378581469433::1697224292::0::1::::<><>::uid://6vl6bjy03myo::::res://Obstacles/Pickups/PickupBase.tscn<>res://Obstacles/Pickups/ShieldPickup.gd<>uid://bmilnekoxkcew::::res://Sprites/Obstacles/Pickups/pickup_shield.png
+::res://Player/::1697224246
+Player.gd::GDScript::-1::1697224245::0::1::::<>CharacterBody2D<>::
+Player.tscn::PackedScene::3013117652048555923::1697224246::0::1::::<><>::uid://dlu2tp2xfisvn::::res://Sprites/Player/Pistol/Player_Move_Pistol.png<>uid://idyensmd0p7i::::res://Sprites/Player/Pistol/Player_Melee_Pistol.png<>uid://ca63a6anugjpi::::res://Sprites/Player/Pistol/Player_Shoot_Pistol.png<>uid://cd3nhop4ojg3b::::res://Sprites/Player/Pistol/Player_Reload_Pistol.png<>uid://ceetyrbvhdga3::::res://Sprites/Player/Pistol/Player_Idle_Pistol.png<>res://Player/Player.gd<>uid://26k0swdrk205::::res://Sounds/Effects/pistol.ogg<>uid://cn5bm58c0vb32::::res://Sounds/Effects/outofammo.ogg
 ::res://Player/HealthBar/::1689031554
 HealthBar.gd::GDScript::-1::1689031265::0::1::::<>Control<>::
 HealthBar.tscn::PackedScene::2526485339400551206::1689031554::0::1::::<><>::uid://cioyqehx5bauv

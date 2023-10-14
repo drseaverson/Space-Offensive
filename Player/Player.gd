@@ -27,6 +27,7 @@ var is_reloading = false
 var is_shooting = false
 var is_melee = false
 var dead = false
+var temp_damagetaken = 0
 
 func _ready():
 	#grabs state machine instance to manage animations for player
@@ -93,32 +94,44 @@ func _player_shoot():
 	bullet_temp.rotation_degrees = rotation_degrees
 	get_tree().get_root().add_child(bullet_temp)
 	
-#set_physics_process(false) when player dies so you can't move
+#damage handler including shield function
 func take_damage(attack : Attack):
-	if (attack.attack_damage >= 50):
-		print("Knockback Force Applied: ", attack.knockback_force)
-		set_velocity((global_position - attack.attack_position).normalized() * attack.knockback_force)
-		move_and_slide()
-		$TakeDamage2.play()
+	temp_damagetaken = attack.attack_damage
+	if (shield_health > 0 && shield_health < (temp_damagetaken * .75)):
+		temp_damagetaken = temp_damagetaken - shield_health
+		shield_health = 0
+		#shield break sound
+		player_health -= temp_damagetaken
+		print("Player Took Health Damage: ", temp_damagetaken)
+	elif (shield_health > 0):
+		shield_health -= temp_damagetaken * .75
+		#shield hit sound
+		print("Player Took Shield Damage: ", temp_damagetaken * .75)
 	else:
-		$TakeDamage1.play()
-	player_health -= attack.attack_damage
-	print("Player Took Damage: ", attack.attack_damage)
+		player_health -= temp_damagetaken
+		#knockback handling
+		if (attack.attack_damage >= 50):
+			print("Knockback Force Applied: ", attack.knockback_force)
+			set_velocity((global_position - attack.attack_position).normalized() * attack.knockback_force)
+			move_and_slide()
+			$TakeDamage2.play()
+		else:
+			$TakeDamage1.play()
 	if player_health <= 0:
-		# lock movement for death animation/explosion
+		set_physics_process(false)
+		#play death animations/sounds etc
 		dead = true
 
 #adds health/shield based on type given
 func _add_health(health_amount, type):
 	if (type == "health"):
 		player_health += health_amount
-		print("Player Gained " + health_amount + " health")
+		print("Player Gained ", health_amount, " health")
 		if (player_health > max_health):
 			player_health = max_health
 	elif (type == "shield"):
 		shield_health += health_amount
-		print("Player Gained " + health_amount + " shield")
+		print("Player Gained ", health_amount, " shield")
 		if (shield_health > max_shield):
 			shield_health = max_shield
 	#play health gain sound/animation
-
